@@ -33,7 +33,7 @@ export function ModalCarreira({ isOpen, onClose }: ModalProps) {
           padding: '10px',
         }}
       >
-        <Grid container direction='row' justify='space-between'>
+        <Grid container direction='row' justifyContent='space-between'>
           <Typography
             variant='h6'
             style={{

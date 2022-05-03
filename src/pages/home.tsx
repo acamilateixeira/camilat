@@ -66,7 +66,7 @@ export function Home() {
   return (
     <>
       <Grid container justifyContent='center' alignItems='center' direction='row'>
-        <Grid item xs={6} sm={6} md={6} lg={6}>
+        <Grid item xs={6} sm={12} md={6} lg={6}>
           <img
             className={css.imagem}
             src='https://acamilateixeira.github.io/camilat/img/foto.png'
@@ -98,7 +98,7 @@ export function Home() {
           </Typography>
         </Grid>
 
-        <Grid item xs={6} sm={6} md={6} lg={6} className={css.container}>
+        <Grid item xs={6} sm={12} md={6} lg={6} className={css.container}>
           {/* apresentação com botão de ler mais */}
           <Typography className={css.titulo} align='center'>
             Que bom ter você aqui!
@@ -125,7 +125,7 @@ export function Home() {
           </Typography>
 
           <Grid container justifyContent='center' alignItems='center' direction='row'>
-            <Grid item xs={4} sm={4} md={4} lg={4}>
+            <Grid item xs={4} sm={12} md={4} lg={4}>
               <TableContainer
                 component={Paper}
                 style={{ margin: '30px', maxWidth: '200px', maxHeight: '300px' }}
