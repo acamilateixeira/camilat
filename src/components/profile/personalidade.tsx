@@ -31,7 +31,7 @@ export function Personalidade() {
           Minha maior vantagem é a <strong>criatividade</strong>
           , sempre estou trabalhando em algo novo.
           <br />
-          Correr atrás de aprender e aprimorar minhas habilidades, só consigo na prática.
+          Gosto de colocar em prática o conhecimento e correr para o desafio.
           <br />
           <br />
           <img

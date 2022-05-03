@@ -37,8 +37,8 @@ export function Graficos() {
         Mente
       </Typography>
 
-      <ResponsiveContainer width='50%' height='50%'>
-        <PieChart width={400} height={400}>
+      <ResponsiveContainer width='80%' height='35%'>
+        <PieChart width={500} height={500}>
           <Pie
             dataKey='value'
             isAnimationActive={false}
@@ -47,6 +47,7 @@ export function Graficos() {
             cy='50%'
             outerRadius={80}
             fill='#8884d8'
+            label
           >
             {mente.map((entry, index) => (
               <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
@@ -63,8 +64,8 @@ export function Graficos() {
         Energia
       </Typography>
 
-      <ResponsiveContainer width='50%' height='50%'>
-        <PieChart width={400} height={400}>
+      <ResponsiveContainer width='80%' height='35%'>
+        <PieChart width={500} height={500}>
           <Pie
             dataKey='value'
             isAnimationActive={false}
@@ -90,8 +91,8 @@ export function Graficos() {
         Natureza
       </Typography>
 
-      <ResponsiveContainer width='50%' height='50%'>
-        <PieChart width={400} height={400}>
+      <ResponsiveContainer width='80%' height='35%'>
+        <PieChart width={500} height={500}>
           <Pie
             dataKey='value'
             isAnimationActive={false}
@@ -117,8 +118,8 @@ export function Graficos() {
         Táticas
       </Typography>
 
-      <ResponsiveContainer width='50%' height='50%'>
-        <PieChart width={400} height={400}>
+      <ResponsiveContainer width='80%' height='35%'>
+        <PieChart width={500} height={500}>
           <Pie
             dataKey='value'
             isAnimationActive={false}
@@ -144,8 +145,8 @@ export function Graficos() {
         Identidade
       </Typography>
 
-      <ResponsiveContainer width='50%' height='50%'>
-        <PieChart width={400} height={400}>
+      <ResponsiveContainer width='80%' height='35%'>
+        <PieChart width={500} height={500}>
           <Pie
             dataKey='value'
             isAnimationActive={false}
