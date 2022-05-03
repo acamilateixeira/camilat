@@ -2,10 +2,9 @@ import Container from '@material-ui/core/Container';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
-import { ReactNode, useState } from 'react';
+import { ReactNode } from 'react';
 
 import { Navbar } from './navbar';
-import { Sidebar } from './sidebar';
 
 interface DashboardProps {
   children: ReactNode;
@@ -24,17 +23,12 @@ export function Dashboard({ children }: DashboardProps) {
     })
   )();
 
-  const [hiddenSidebarIsVisible, setHiddenSidebarIsVisible] = useState(false);
-
-  function toggleHiddenSidebar() {
-    setHiddenSidebarIsVisible(!hiddenSidebarIsVisible);
-  }
   return (
     <>
       <div className={css.root}>
         <CssBaseline />
 
-        <Navbar toggleHiddenSidebar={toggleHiddenSidebar} />
+        <Navbar />
 
         <main className={css.content}>
           <Container
@@ -51,11 +45,6 @@ export function Dashboard({ children }: DashboardProps) {
           </Container>
         </main>
       </div>
-
-      <Sidebar
-        hiddenSidebarIsVisible={hiddenSidebarIsVisible}
-        toggleHiddenSidebar={toggleHiddenSidebar}
-      />
     </>
   );
 }

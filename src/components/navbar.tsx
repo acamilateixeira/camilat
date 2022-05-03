@@ -13,11 +13,7 @@ import { MdBadge, MdContacts, MdNextWeek, MdTipsAndUpdates } from 'react-icons/m
 import { ModalCarreira } from './carreira/modalCarreira';
 import { ModalPerfil } from './profile/modalPerfil';
 
-interface NavbarProps {
-  toggleHiddenSidebar: () => void;
-}
-
-export function Navbar({ toggleHiddenSidebar }: NavbarProps) {
+export function Navbar() {
   const theme = useThemeMaterialUI();
 
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
@@ -92,7 +88,6 @@ export function Navbar({ toggleHiddenSidebar }: NavbarProps) {
 
             <Grid item>
               <IconButton
-                onClick={toggleHiddenSidebar}
                 style={{
                   color: '#fff',
                 }}
