@@ -10,6 +10,7 @@ import {
 import { useState } from 'react';
 import { MdBadge, MdContacts, MdNextWeek, MdTipsAndUpdates } from 'react-icons/md';
 
+import { ModalCarreira } from './carreira/modalCarreira';
 import { ModalPerfil } from './profile/modalPerfil';
 
 interface NavbarProps {
@@ -22,11 +23,15 @@ export function Navbar({ toggleHiddenSidebar }: NavbarProps) {
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   const [abrirModalPerfil, setAbrirModalPerfil] = useState(false);
+  const [abrirModalCarreira, setAbrirModalCarreira] = useState(false);
 
   function handleAbrirModalPerfil() {
     setAbrirModalPerfil(true);
   }
 
+  function handleAbrirModalCarreira() {
+    setAbrirModalCarreira(true);
+  }
   return (
     <>
       <AppBar
@@ -71,6 +76,7 @@ export function Navbar({ toggleHiddenSidebar }: NavbarProps) {
 
             <Grid item>
               <IconButton
+                onClick={handleAbrirModalCarreira}
                 style={{
                   color: '#fff',
                 }}
@@ -119,6 +125,7 @@ export function Navbar({ toggleHiddenSidebar }: NavbarProps) {
       </AppBar>
 
       <ModalPerfil isOpen={abrirModalPerfil} onClose={() => setAbrirModalPerfil(false)} />
+      <ModalCarreira isOpen={abrirModalCarreira} onClose={() => setAbrirModalCarreira(false)} />
     </>
   );
 }

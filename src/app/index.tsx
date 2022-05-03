@@ -13,7 +13,7 @@ export function App() {
     palette: {
       type: type,
       primary: {
-        main: '#00A19D',
+        main: 'rgba(255,0,0,1)',
       },
       secondary: {
         main: '#D72323',

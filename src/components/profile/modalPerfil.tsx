@@ -11,6 +11,7 @@ import {
 import { MdClose } from 'react-icons/md';
 
 import { Graficos } from './graficos';
+import { Personalidade } from './personalidade';
 
 interface ModalProps {
   isOpen: boolean;
@@ -63,6 +64,8 @@ export function ModalPerfil({ isOpen, onClose }: ModalProps) {
         </DialogContentText>
 
         <Typography variant='h6'>Personalidade "Protagonista"</Typography>
+
+        <Personalidade />
 
         <Graficos />
 
