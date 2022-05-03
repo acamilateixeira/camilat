@@ -17,7 +17,7 @@ export function AppRoutes() {
       <Dashboard>
         <CssBaseline />
         <Switch>
-          <Route exact path='/' component={Home} />
+          <Route exact path='/camilat' component={Home} />
         </Switch>
       </Dashboard>
     </BrowserRouter>

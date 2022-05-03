@@ -67,7 +67,11 @@ export function Home() {
     <>
       <Grid container justifyContent='center' alignItems='center' direction='row'>
         <Grid item xs={6} sm={6} md={6} lg={6}>
-          <img className={css.imagem} src='/img/foto.png' alt='foto' />
+          <img
+            className={css.imagem}
+            src='https://acamilateixeira.github.io/camilat/img/foto.png'
+            alt='foto'
+          />
 
           <Typography variant='h4' color='textSecondary'>
             Desenvolvedora Full Stack
