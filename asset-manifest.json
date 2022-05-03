@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/camilat/static/css/main.c40c81c5.css",
-    "main.js": "/camilat/static/js/main.6760ad21.js",
+    "main.js": "/camilat/static/js/main.a5926242.js",
     "static/media/alata-all-400-normal.woff": "/camilat/static/media/alata-all-400-normal.0b577d1892d8fcbbe6ef.woff",
     "static/media/alata-latin-400-normal.woff2": "/camilat/static/media/alata-latin-400-normal.e84348368f0c68e3303a.woff2",
     "static/media/alata-latin-ext-400-normal.woff2": "/camilat/static/media/alata-latin-ext-400-normal.bf3e9a749de72680e919.woff2",
     "static/media/alata-vietnamese-400-normal.woff2": "/camilat/static/media/alata-vietnamese-400-normal.6a13a2fd16d68899bcf5.woff2",
     "index.html": "/camilat/index.html",
     "main.c40c81c5.css.map": "/camilat/static/css/main.c40c81c5.css.map",
-    "main.6760ad21.js.map": "/camilat/static/js/main.6760ad21.js.map"
+    "main.a5926242.js.map": "/camilat/static/js/main.a5926242.js.map"
   },
   "entrypoints": [
     "static/css/main.c40c81c5.css",
-    "static/js/main.6760ad21.js"
+    "static/js/main.a5926242.js"
   ]
 }
