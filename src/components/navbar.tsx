@@ -11,7 +11,9 @@ import { useState } from 'react';
 import { MdBadge, MdContacts, MdNextWeek, MdTipsAndUpdates } from 'react-icons/md';
 
 import { ModalCarreira } from './carreira/modalCarreira';
+import { ModalContato } from './contato/modalContato';
 import { ModalPerfil } from './profile/modalPerfil';
+import { ModalProjetos } from './projetos/modalProjetos';
 
 export function Navbar() {
   const theme = useThemeMaterialUI();
@@ -20,6 +22,8 @@ export function Navbar() {
 
   const [abrirModalPerfil, setAbrirModalPerfil] = useState(false);
   const [abrirModalCarreira, setAbrirModalCarreira] = useState(false);
+  const [abrirModalContato, setAbrirModalContato] = useState(false);
+  const [abrirModalProjetos, setAbrirModalProjetos] = useState(false);
 
   function handleAbrirModalPerfil() {
     setAbrirModalPerfil(true);
@@ -28,6 +32,15 @@ export function Navbar() {
   function handleAbrirModalCarreira() {
     setAbrirModalCarreira(true);
   }
+
+  function handleAbrirModalContato() {
+    setAbrirModalContato(true);
+  }
+
+  function handleAbrirModalProjetos() {
+    setAbrirModalProjetos(true);
+  }
+
   return (
     <>
       <AppBar
@@ -42,6 +55,7 @@ export function Navbar() {
           borderRadius: '16px 16px 0px 0px',
           width: isMobile ? '100%' : '50%',
           transform: isMobile ? 'translateX(0%)' : 'translateX(-50%)',
+          padding: '10px',
         }}
       >
         <Toolbar>
@@ -88,6 +102,7 @@ export function Navbar() {
 
             <Grid item>
               <IconButton
+                onClick={handleAbrirModalContato}
                 style={{
                   color: '#fff',
                 }}
@@ -103,6 +118,7 @@ export function Navbar() {
 
             <Grid item>
               <IconButton
+                onClick={handleAbrirModalProjetos}
                 style={{
                   color: '#fff',
                 }}
@@ -121,6 +137,8 @@ export function Navbar() {
 
       <ModalPerfil isOpen={abrirModalPerfil} onClose={() => setAbrirModalPerfil(false)} />
       <ModalCarreira isOpen={abrirModalCarreira} onClose={() => setAbrirModalCarreira(false)} />
+      <ModalContato isOpen={abrirModalContato} onClose={() => setAbrirModalContato(false)} />
+      <ModalProjetos isOpen={abrirModalProjetos} onClose={() => setAbrirModalProjetos(false)} />
     </>
   );
 }
