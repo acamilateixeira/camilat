@@ -1,18 +1,8 @@
-import {
-  createStyles,
-  Grid,
-  IconButton,
-  makeStyles,
-  Paper,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableRow,
-  Typography,
-} from '@material-ui/core';
+import { createStyles, Grid, IconButton, makeStyles, Typography } from '@material-ui/core';
 import { FaLaravel, FaNodeJs, FaPython, FaReact } from 'react-icons/fa';
 import { MdLocationOn } from 'react-icons/md';
+
+import { Tabela } from '../components/home/tabela';
 
 export function Home() {
   const css = makeStyles(theme =>
@@ -124,48 +114,8 @@ export function Home() {
           </Typography>
 
           <Grid container justifyContent='center' alignItems='center' direction='row'>
-            <Grid item sm={12} md={4} lg={4}>
-              <TableContainer
-                component={Paper}
-                style={{ margin: '30px', maxWidth: '200px', maxHeight: '300px' }}
-              >
-                <Table size='small'>
-                  <TableBody>
-                    <TableRow>
-                      <TableCell align='center'>JavaScript</TableCell>
-                    </TableRow>
-
-                    <TableRow>
-                      <TableCell align='center'>React</TableCell>
-                    </TableRow>
-
-                    <TableRow>
-                      <TableCell align='center'>Node.js</TableCell>
-                    </TableRow>
-
-                    <TableRow>
-                      <TableCell align='center'>PHP</TableCell>
-                    </TableRow>
-
-                    <TableRow>
-                      <TableCell align='center'>Laravel</TableCell>
-                    </TableRow>
-
-                    <TableRow>
-                      <TableCell align='center'>Git</TableCell>
-                    </TableRow>
-
-                    <TableRow>
-                      <TableCell align='center'>SQLSERVER</TableCell>
-                    </TableRow>
-
-                    <TableRow>
-                      <TableCell align='center'>Metodologias Ágeis</TableCell>
-                    </TableRow>
-                  </TableBody>
-                </Table>
-              </TableContainer>
-            </Grid>
+            <Grid item sm={12} md={4} lg={4}></Grid>
+            <Tabela />
           </Grid>
         </Grid>
       </Grid>

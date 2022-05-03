@@ -20,7 +20,7 @@ interface ModalProps {
 export function ModalCarreira({ isOpen, onClose }: ModalProps) {
   function handleDownload() {
     const element = document.createElement('a');
-    element.setAttribute('href', 'https://acamilateixeira.github.io/camilat/img/cv.pdf');
+    element.setAttribute('href', 'https://acamilateixeira.github.io/camilat/file/cv.pdf');
     element.setAttribute('target', '_blank');
     element.click();
   }
