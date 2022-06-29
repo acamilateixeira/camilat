@@ -49,6 +49,7 @@ export function Home() {
         borderRadius: '10px',
         boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)',
         background: 'rgba(255,0,0,0.1)',
+        marginBottom: '20px',
       },
     })
   )();
@@ -94,22 +95,21 @@ export function Home() {
           </Typography>
 
           <Typography variant='body1' align='center'>
-            Meu nome é <b>Camila Teixeira</b>, tenho <b>22 anos</b> e sou
-            <b>desenvolvedora - Full Stack</b>
+            Meu nome é <b>Camila Teixeira</b>, tenho <b>22 anos</b> e sou{' '}
+            <b>desenvolvedora fullStack</b>
             <br />
             <br />
             Faz <b> 2 anos</b> que comecei a trabalhar com <b>HTML</b> e <b>CSS</b>
+            {''}
+            em Portugal, lá costumava fazer sites com WordPress foi assim que conheci a{' '}
+            <b>programação</b>.
             <br />
-            em Portugal, lá costumava fazer sites com WordPress foi
-            <br /> assim que conheci a <b>programação</b>.
             <br />
+            Acabei decidindo me tornar <b>desenvolvedora</b> e voltei ao Brasil para fazer faculdade
+            de Análise e Desenvolvimento de Sistemas (Termina em 2023).
             <br />
-            Acabei decidindo me tornar <b>desenvolvedora</b> e voltei ao Brasil para
-            <br />
-            fazer faculdade de Análise e Desenvolvimento de Sistemas (Termina em 2023).
-            <br />
-            Hoje trabalho como <b>assistente de desenvolvimento - Full Stack</b>
-            <br /> no <b>Sicoob Central Cecremge - MG </b> aqui aprendi:
+            Hoje trabalho como <b>assistente de desenvolvimento - fullStack</b> no{' '}
+            <b>Sicoob Central Cecremge - MG </b> aqui aprendi:
             <br />
           </Typography>
 

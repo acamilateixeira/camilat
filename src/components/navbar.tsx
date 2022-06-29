@@ -55,7 +55,7 @@ export function Navbar() {
           borderRadius: '16px 16px 0px 0px',
           width: isMobile ? '100%' : '50%',
           transform: isMobile ? 'translateX(0%)' : 'translateX(-50%)',
-          padding: '10px',
+          padding: '5px',
         }}
       >
         <Toolbar>

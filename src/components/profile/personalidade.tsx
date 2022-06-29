@@ -7,7 +7,7 @@ export function Personalidade() {
 
       <CardContent>
         <Typography variant='body1'>
-          Eu me tenho uma personalide (dita pelos meus colegas de equipe) como muito{' '}
+          Eu tenho uma personalidade (dita pelos meus colegas de equipe) como muito{' '}
           <strong>dedicada</strong>.
           <br />
           <br />
