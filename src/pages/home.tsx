@@ -96,13 +96,11 @@ export function Home() {
 
           <Typography variant='body1' align='center'>
             Meu nome é <b>Camila Teixeira</b>, tenho <b>22 anos</b> e sou{' '}
-            <b>desenvolvedora fullStack</b>
+            <b>Desenvolvedora FullStack</b>
             <br />
             <br />
-            Faz <b> 2 anos</b> que comecei a trabalhar com <b>HTML</b> e <b>CSS</b>
-            {''}
-            em Portugal, lá costumava fazer sites com WordPress foi assim que conheci a{' '}
-            <b>programação</b>.
+            Faz <b> 2 anos</b> que comecei a trabalhar com <b>HTML</b> e <b>CSS</b> em Portugal, lá
+            costumava fazer sites com WordPress foi assim que conheci a <b>programação</b>.
             <br />
             <br />
             Acabei decidindo me tornar <b>desenvolvedora</b> e voltei ao Brasil para fazer faculdade
