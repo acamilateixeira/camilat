@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    name: Lint, tipos, testes e build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: package.json
+      - run: npm install --no-audit --no-fund
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm test
+      - run: npx vite build
+      - name: Orçamento de tamanho do bundle (JS < 150 kB)
+        run: |
+          size=$(du -cb dist/assets/*.js | tail -1 | cut -f1)
+          echo "JS total: $size bytes"
+          [ "$size" -lt 153600 ] || { echo "::error::Bundle JS passou de 150 kB ($size bytes)"; exit 1; }
