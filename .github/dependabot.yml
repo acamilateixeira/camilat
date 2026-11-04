@@ -1,11 +1,17 @@
 version: 2
 updates:
+  # Minor/patch agrupados num PR só. Majors de ferramentas (TypeScript, Vite,
+  # ESLint, Vitest) mudam juntas e quebram peer deps: são atualizadas à mão.
   - package-ecosystem: npm
     directory: /
     schedule: { interval: weekly }
     groups:
       tooling:
         patterns: ["*"]
+        update-types: [minor, patch]
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
     commit-message: { prefix: chore }
   - package-ecosystem: github-actions
     directory: /
