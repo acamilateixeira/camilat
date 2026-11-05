@@ -37,7 +37,7 @@ const symbols = ['{ }', '↗', '</>']
         </div>
       </article>
 
-      <div class="project-grid">
+      <div v-if="others.length" class="project-grid">
         <article v-for="(project, i) in others" :key="project.repo" class="project-card">
           <div :class="['project-art', `art-${i}`]">
             <span class="project-number">/ 0{{ i + featured.length + 1 }}</span>

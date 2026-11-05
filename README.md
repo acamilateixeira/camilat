@@ -41,4 +41,5 @@ Configuração única no GitHub:
 
 ## Projetos em destaque
 
-- [TripFlow](https://github.com/acamilateixeira/tripflow) — API Laravel de viagens corporativas com outbox, RabbitMQ, Redis, testes e CI/CD.
+- [TripFlow](https://github.com/acamilateixeira/tripflow) — API Laravel de viagens corporativas com aprovação concorrente por orçamento, idempotência e publicação assíncrona via outbox e RabbitMQ.
+- [Bora](https://github.com/acamilateixeira/Bora) — App de corridas criado a pedido da Prefeitura de Conceição do Mato Dentro (MG), com despacho, histórico de atendimentos e acesso por órgão.
