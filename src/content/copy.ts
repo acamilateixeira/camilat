@@ -12,10 +12,10 @@ export const resumes: Localized = {
 }
 
 export const skills: SkillGroup[] = [
-  { title: { pt: 'Back-end', en: 'Back end' }, items: ['PHP 8 / Laravel', 'Node.js · Deno (Edge Functions)', 'APIs REST e integrações', 'Filas e mensageria', 'C# / .NET · SOLID'] },
-  { title: { pt: 'Dados', en: 'Data' }, items: ['PostgreSQL · RLS', 'MySQL · SQL Server', 'Oracle · PL/SQL', 'Redis'] },
+  { title: { pt: 'Back-end', en: 'Back end' }, items: ['PHP 8 / Laravel', 'Node.js · TypeScript', 'APIs REST e integrações', 'Filas e mensageria (RabbitMQ)', 'SOLID · Design patterns'] },
+  { title: { pt: 'Dados', en: 'Data' }, items: ['MySQL · SQL Server · PostgreSQL', 'Oracle · PL/SQL', 'Redis', 'Modelagem e otimização de consultas'] },
   { title: { pt: 'Engenharia', en: 'Engineering' }, items: ['Testes (PHPUnit, Pest, Jest)', 'CI/CD (GitHub Actions, GitLab)', 'Docker · Linux', 'AWS · Azure'] },
-  { title: { pt: 'Front-end, mobile e plataformas', en: 'Front end, mobile & platforms' }, items: ['TypeScript · React · Vue 3', 'React Native (Expo)', 'Supabase (Auth, Realtime, Storage)', 'Salesforce (Apex, LWC, Flows)', 'Oracle APEX'] },
+  { title: { pt: 'Front-end, mobile e plataformas', en: 'Front end, mobile & platforms' }, items: ['React · Vue 3 · TypeScript', 'React Native · Supabase', 'Salesforce (Apex, LWC, Flows)', 'Oracle APEX', 'C# / .NET'] },
 ]
 
 export const copy = {
@@ -24,14 +24,14 @@ export const copy = {
     skip: 'Pular para o conteúdo',
     navLabel: 'Navegação principal',
     language: 'Idioma do site',
-    eyebrow: 'Camila Teixeira / Software Engineer · Full Stack',
+    eyebrow: 'Camila Teixeira / Software Engineer · Back-end e Full Stack',
     titleTop: 'Integrações que funcionam.',
     titleBottom: 'Legado que evolui.',
-    intro: 'Desenvolvedora full stack com 5 anos em sistemas financeiros, ERP, e-commerce nacional e aplicações para indústria e mineração. Back-end em PHP/Laravel e Node.js, interfaces em React, Vue e TypeScript, e app mobile com React Native e Supabase. Trabalho do requisito à produção.',
-    location: 'Belo Horizonte, Brasil · híbrido, remoto ou relocação',
+    intro: 'Desenvolvedora back-end e full stack com 5 anos em sistemas financeiros, ERP, e-commerce nacional e aplicações para indústria e mineração. PHP/Laravel e Node.js no back-end, React, Vue e TypeScript no front-end, e integrações entre ERP, Salesforce e e-commerce. Trabalho do requisito à produção, incluindo modernização de legado e sustentação.',
+    location: 'Belo Horizonte, Brasil · híbrido ou remoto',
     cv: 'Baixar currículo',
     view: 'Ver projetos',
-    ribbon: ['PHP / LARAVEL', 'TYPESCRIPT / REACT', 'SUPABASE', 'INTEGRAÇÕES', 'AWS / AZURE'],
+    ribbon: ['PHP / LARAVEL', 'NODE.JS / REACT', 'INTEGRAÇÕES', 'MENSAGERIA', 'AWS / AZURE'],
     aboutTitle: 'Como eu trabalho.',
     principles: [
       { title: 'Consistência antes de velocidade', text: 'Em sistema financeiro e de ERP, um dado errado custa mais que uma entrega atrasada. Transação, idempotência e lock no lugar certo vêm primeiro.' },
@@ -57,7 +57,7 @@ export const copy = {
     training: 'Engenharia de Software Moderna — UFMG · Trilha Salesforce Admin / App Builder · Inglês avançado',
     labelContact: '04 / Contato',
     contact: 'Vamos conversar?',
-    contactText: 'Aberta a oportunidades como desenvolvedora full stack ou back-end (PHP/Laravel, TypeScript, React, Node.js), no Brasil ou com relocação.',
+    contactText: 'Aberta a oportunidades como desenvolvedora back-end ou full stack (PHP/Laravel, Node.js, React).',
     email: 'Enviar e-mail',
     footer: 'Contexto. Código. Consistência.',
     top: 'Voltar ao início',
@@ -67,14 +67,14 @@ export const copy = {
     skip: 'Skip to content',
     navLabel: 'Main navigation',
     language: 'Website language',
-    eyebrow: 'Camila Teixeira / Software Engineer · Full Stack',
+    eyebrow: 'Camila Teixeira / Software Engineer · Back end & Full Stack',
     titleTop: 'Integrations that work.',
     titleBottom: 'Legacy that evolves.',
-    intro: 'Full stack developer with 5 years in financial systems, ERP, nationwide e-commerce, and applications for industry and mining. Back end in PHP/Laravel and Node.js, interfaces in React, Vue, and TypeScript, and a mobile app with React Native and Supabase. I work from requirements to production.',
+    intro: 'Back-end and full stack developer with 5 years in financial systems, ERP, nationwide e-commerce, and applications for industry and mining. PHP/Laravel and Node.js on the back end, React, Vue, and TypeScript on the front end, and integrations between ERP, Salesforce, and e-commerce. I work from requirements to production, including legacy modernization and production support.',
     location: 'Belo Horizonte, Brazil · hybrid, remote, or open to relocation',
     cv: 'Download résumé',
     view: 'See projects',
-    ribbon: ['PHP / LARAVEL', 'TYPESCRIPT / REACT', 'SUPABASE', 'INTEGRATIONS', 'AWS / AZURE'],
+    ribbon: ['PHP / LARAVEL', 'NODE.JS / REACT', 'INTEGRATIONS', 'MESSAGING', 'AWS / AZURE'],
     aboutTitle: 'How I work.',
     principles: [
       { title: 'Consistency before speed', text: 'In financial and ERP systems, wrong data costs more than a late delivery. Transactions, idempotency, and locks in the right place come first.' },
@@ -100,7 +100,7 @@ export const copy = {
     training: 'Modern Software Engineering — UFMG · Salesforce Admin / App Builder track · Advanced English',
     labelContact: '04 / Contact',
     contact: 'Let’s talk?',
-    contactText: 'Open to full stack or back-end roles (PHP/Laravel, TypeScript, React, Node.js), in Brazil or with relocation.',
+    contactText: 'Open to back-end or full stack roles (PHP/Laravel, Node.js, React), remote or with relocation.',
     email: 'Send an email',
     footer: 'Context. Code. Consistency.',
     top: 'Back to top',
