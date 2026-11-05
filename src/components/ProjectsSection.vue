@@ -7,6 +7,7 @@ import { projects } from '../content/projects'
 const { language, t } = useLanguage()
 const featured = computed(() => projects.filter((p) => p.featured))
 const others = computed(() => projects.filter((p) => !p.featured))
+const assetBase = import.meta.env.BASE_URL
 const repoUrl = (repo: string) => `${contact.github}/${repo}`
 const symbols = ['{ }', '↗', '</>']
 </script>
@@ -18,10 +19,14 @@ const symbols = ['{ }', '↗', '</>']
       <h2>{{ t.projects }}</h2>
       <p class="section-intro">{{ t.projectNote }}</p>
 
-      <article v-for="(project, i) in featured" :key="project.repo" class="project-card featured" data-test="featured-project">
+      <article v-for="(project, i) in featured" :id="project.id" :key="project.id" class="project-card featured" data-test="featured-project">
         <div :class="['project-art', 'art-featured', `art-featured-${i}`]">
           <span class="project-number">{{ t.featured }}</span>
-          <span class="project-symbol" aria-hidden="true">{{ project.symbol ?? '⇄' }}</span>
+          <figure v-if="project.diagram" class="project-diagram">
+            <img :src="assetBase + project.diagram.file" :alt="project.diagram.alt[language]" width="360" height="260" loading="lazy">
+            <figcaption>{{ t.diagram }}</figcaption>
+          </figure>
+          <span v-else class="project-symbol" aria-hidden="true">{{ project.symbol ?? '⇄' }}</span>
           <span class="project-type">{{ project.type }}</span>
         </div>
         <div class="project-body">
@@ -31,14 +36,15 @@ const symbols = ['{ }', '↗', '</>']
             <li v-for="item in project.highlights[language]" :key="item">{{ item }}</li>
           </ul>
           <p class="project-stack">{{ project.stack }}</p>
-          <a :href="repoUrl(project.repo)" target="_blank" rel="noopener noreferrer">
+          <a v-if="project.repo" :href="repoUrl(project.repo)" target="_blank" rel="noopener noreferrer">
             {{ t.source }}<span aria-hidden="true">↗</span>
           </a>
+          <p v-else class="project-availability">{{ t.privateProject }}</p>
         </div>
       </article>
 
       <div v-if="others.length" class="project-grid">
-        <article v-for="(project, i) in others" :key="project.repo" class="project-card">
+        <article v-for="(project, i) in others" :key="project.id" class="project-card">
           <div :class="['project-art', `art-${i}`]">
             <span class="project-number">/ 0{{ i + featured.length + 1 }}</span>
             <span class="project-symbol" aria-hidden="true">{{ symbols[i % 3] }}</span>
@@ -48,7 +54,7 @@ const symbols = ['{ }', '↗', '</>']
             <h3>{{ project.name }}</h3>
             <p>{{ project.description[language] }}</p>
             <p class="project-stack">{{ project.stack }}</p>
-            <a :href="repoUrl(project.repo)" target="_blank" rel="noopener noreferrer">
+            <a v-if="project.repo" :href="repoUrl(project.repo)" target="_blank" rel="noopener noreferrer">
               {{ t.source }}<span aria-hidden="true">↗</span>
             </a>
           </div>

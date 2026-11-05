@@ -2,6 +2,7 @@ import type { Project } from './types'
 
 export const projects: Project[] = [
   {
+    id: 'tripflow',
     name: 'TripFlow',
     repo: 'tripflow',
     type: 'Back-end',
@@ -28,6 +29,7 @@ export const projects: Project[] = [
     },
   },
   {
+    id: 'bora',
     name: 'Bora',
     repo: 'Bora',
     type: 'Full Stack · Mobile',
@@ -50,6 +52,38 @@ export const projects: Project[] = [
         'I separated requests from assignments so the requester and route stay with the request when the assigned driver changes. Dispatch can check trip history, count completed rides by driver, and call from the driver profile.',
         'I modeled operational membership separately from presence. A driver can be approved and offline. Dispatch follows changes through Realtime, and the database records status history.',
         'The code includes configurable presence expiry, push via an Edge Function using a Vault secret, and PostgreSQL policy and migration tests.',
+      ],
+    },
+  },
+  {
+    id: 'livit-live-controller',
+    name: 'Livit Live Controller',
+    type: 'Full Stack · macOS',
+    featured: true,
+    stack: 'Python · TikTokLive · Node.js · JavaScript · Canvas · AppleScript · Chromium',
+    diagram: {
+      file: 'img/livit-architecture.svg',
+      alt: {
+        pt: 'TikTok LIVE envia eventos ao servidor Python. O painel e o overlay usam o estado local. Um worker Node executa os jogos e uma extensão Chromium atende à fila de música.',
+        en: 'TikTok LIVE sends events to the Python server. The control panel and overlay share local state. A Node worker runs the games and a Chromium extension handles the music queue.',
+      },
+    },
+    description: {
+      pt: 'Criei uma mesa de controle local para não depender de várias ferramentas pagas de overlay. No meu Mac com 8 GB de RAM, o desafio era manter uma transmissão com identidade própria enquanto LIVE Studio, navegador, player e animações disputavam recursos.',
+      en: 'I built a local control desk to replace several paid overlay tools. On my 8 GB Mac, the challenge was giving the stream its own visual identity while LIVE Studio, the browser, the player, and animations shared limited resources.',
+    },
+    highlights: {
+      pt: [
+        'Separei o painel e a prévia da saída capturada pelo LIVE Studio. Posso ensaiar um jogo ou mudar o cenário antes de colocar a mudança no ar pela mesma fonte.',
+        'O servidor Python recebe eventos do TikTok LIVE. Um único worker Node, iniciado sob demanda, aplica as regras dos jogos e mantém um placar compartilhado entre painel e overlay.',
+        'AppleScript lê a faixa atual. Uma extensão Chromium opcional busca e enfileira pedidos no Spotify Web ou YouTube Music com pareamento local e confirmação da fila.',
+        'O perfil adaptativo lê a pressão de memória do macOS e ajusta quadros, resolução interna e efeitos. O painel consulta menos em segundo plano e mantém a prévia lateral desligada por padrão.',
+      ],
+      en: [
+        'I separated controls and rehearsal previews from the output captured by LIVE Studio. I can rehearse a game or change scenes before applying the change to the same broadcast source.',
+        'The Python server receives TikTok LIVE events. One on-demand Node worker runs game rules and keeps a shared scoreboard for the panel and overlay.',
+        'AppleScript reads the current track. An optional Chromium extension searches and queues requests in Spotify Web or YouTube Music using local pairing and queue confirmation.',
+        'An adaptive profile reads macOS memory pressure and adjusts animation frame rate, internal resolution, and effects. The control tab polls less in the background and starts with its side preview off.',
       ],
     },
   },

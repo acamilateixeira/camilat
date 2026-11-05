@@ -14,12 +14,14 @@ export interface Experience {
 
 export interface Project {
   name: string
-  repo: string
+  id: string
+  repo?: string
   type: string
   stack: string
   description: Localized
   highlights?: Localized<string[]>
   featured?: boolean
+  diagram?: { file: string; alt: Localized }
   /** Símbolo decorativo do cartão em destaque. */
   symbol?: string
 }
