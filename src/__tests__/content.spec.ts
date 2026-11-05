@@ -17,8 +17,8 @@ describe('conteúdo bilíngue', () => {
     expect(job.highlights.pt.length).toBeGreaterThan(0)
   })
 
-  it('tem exatamente um projeto em destaque', () => {
-    expect(projects.filter((p) => p.featured)).toHaveLength(1)
+  it('destaca TripFlow e Bora, nessa ordem', () => {
+    expect(projects.filter((p) => p.featured).map((p) => p.name)).toEqual(['TripFlow', 'Bora'])
   })
 
   it('traduz os destaques dos projetos', () => {

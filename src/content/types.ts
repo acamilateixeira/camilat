@@ -20,6 +20,8 @@ export interface Project {
   description: Localized
   highlights?: Localized<string[]>
   featured?: boolean
+  /** Símbolo decorativo do cartão em destaque. */
+  symbol?: string
 }
 
 export interface SkillGroup {

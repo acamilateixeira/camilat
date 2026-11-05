@@ -18,10 +18,10 @@ const symbols = ['{ }', '↗', '</>']
       <h2>{{ t.projects }}</h2>
       <p class="section-intro">{{ t.projectNote }}</p>
 
-      <article v-for="project in featured" :key="project.repo" class="project-card featured" data-test="featured-project">
-        <div class="project-art art-featured">
+      <article v-for="(project, i) in featured" :key="project.repo" class="project-card featured" data-test="featured-project">
+        <div :class="['project-art', 'art-featured', `art-featured-${i}`]">
           <span class="project-number">{{ t.featured }}</span>
-          <span class="project-symbol" aria-hidden="true">⇄</span>
+          <span class="project-symbol" aria-hidden="true">{{ project.symbol ?? '⇄' }}</span>
           <span class="project-type">{{ project.type }}</span>
         </div>
         <div class="project-body">
@@ -40,7 +40,7 @@ const symbols = ['{ }', '↗', '</>']
       <div class="project-grid">
         <article v-for="(project, i) in others" :key="project.repo" class="project-card">
           <div :class="['project-art', `art-${i}`]">
-            <span class="project-number">/ 0{{ i + 2 }}</span>
+            <span class="project-number">/ 0{{ i + featured.length + 1 }}</span>
             <span class="project-symbol" aria-hidden="true">{{ symbols[i % 3] }}</span>
             <span class="project-type">{{ project.type }}</span>
           </div>

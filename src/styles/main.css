@@ -33,6 +33,7 @@
 .project-card.featured .project-art{height:auto;min-height:260px}
 .art-featured{background:#2b2b27;color:#f1d4d1}
 .art-featured .project-symbol{font-size:84px}
+.art-featured-1{background:#ad2c2e;color:#f6e3df}
 .project-highlights{margin:4px 0 18px;padding-left:18px}
 .project-highlights li{font-size:14px;line-height:1.75;color:var(--ink);margin-bottom:6px}
 .project-highlights li::marker{color:var(--red)}

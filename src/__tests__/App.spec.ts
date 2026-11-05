@@ -35,6 +35,14 @@ describe('App', () => {
     expect(featured.get('a').attributes('href')).toBe('https://github.com/acamilateixeira/tripflow')
   })
 
+  it('destaca o Bora com link para o repositório', () => {
+    const wrapper = mount(App)
+    const bora = wrapper.findAll('[data-test="featured-project"]')[1]
+
+    expect(bora?.find('h3').text()).toBe('Bora')
+    expect(bora?.get('a').attributes('href')).toBe('https://github.com/acamilateixeira/Bora')
+  })
+
   it('aponta para o currículo do idioma selecionado', async () => {
     const wrapper = mount(App)
     const cv = () => wrapper.get('a[download]')

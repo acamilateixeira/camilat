@@ -6,6 +6,7 @@ export const projects: Project[] = [
     repo: 'tripflow',
     type: 'Back-end',
     featured: true,
+    symbol: '⇄',
     stack: 'Laravel 12 · MySQL · Redis · RabbitMQ · Docker · GitHub Actions',
     description: {
       pt: 'API de viagens corporativas: solicitação, aprovação dentro do orçamento do centro de custo, emissão de reservas e eventos para outros sistemas.',
@@ -25,6 +26,34 @@ export const projects: Project[] = [
         'Idempotency-Key, multi-tenant isolation, and end-to-end correlation ID',
         'Pest (architecture, feature, integration), Larastan level 8, ADRs',
         'CI/CD with AI pull-request review and image published to GHCR',
+      ],
+    },
+  },
+  {
+    name: 'Bora',
+    repo: 'Bora',
+    type: 'Full Stack · Mobile',
+    featured: true,
+    symbol: '⌖',
+    stack: 'React Native · Expo · TypeScript · Supabase (Postgres, RLS, Realtime, Edge Functions)',
+    description: {
+      pt: 'App de gestão de corridas usado pela Prefeitura de Conceição do Mato Dentro (MG) em uma operação temporária. O passageiro solicita, o despacho aprova e atribui, e o motorista executa, com tudo atualizado em tempo real.',
+      en: 'Ride management app used by the city of Conceição do Mato Dentro, Brazil, in a temporary operation. Riders request, dispatch approves and assigns, and drivers complete the trip, all updated in real time.',
+    },
+    highlights: {
+      pt: [
+        'Multi-tenant por organização com RLS no Postgres e funções security definer',
+        'Tempo real com Supabase Realtime e localização do motorista no mapa',
+        'Push por Edge Function em Deno, autorizada por um segredo guardado no Vault',
+        'Disponibilidade do motorista com histórico e expiração automática no banco',
+        'Testes de RLS entre organizações em Postgres, testes unitários e CI',
+      ],
+      en: [
+        'Multi-tenant by organization with Postgres RLS and security definer functions',
+        'Real-time updates with Supabase Realtime and live driver location on the map',
+        'Push via a Deno Edge Function, authorized by a secret stored in Vault',
+        'Driver availability with history and automatic expiry in the database',
+        'Cross-tenant RLS tests on Postgres, unit tests, and CI',
       ],
     },
   },
