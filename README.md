@@ -1,44 +1,65 @@
-# camilat — portfólio
+![Camila Teixeira · Engenharia de Software · Portfólio](docs/cover.svg)
 
-Portfólio de **Camila Teixeira**, Software Engineer PHP/Laravel.
-Publicado em **https://acamilateixeira.github.io/camilat/**
+# Portfólio de Camila Teixeira
 
-**Stack:** Vue 3 (Composition API, `<script setup>`) · TypeScript estrito · Vite · Vitest · ESLint · GitHub Actions
+**Português** · [English](README.en.md) · [Abrir portfólio](https://acamilateixeira.github.io/camilat/)
 
-## Rodar localmente
+[![CI](https://github.com/acamilateixeira/camilat/actions/workflows/ci.yml/badge.svg)](https://github.com/acamilateixeira/camilat/actions/workflows/ci.yml)
+
+Portfólio de engenharia de software com foco em back-end e desenvolvimento full stack. Cada estudo de caso apresenta a necessidade que deu origem ao projeto, o que foi implementado e as razões para as escolhas técnicas.
+
+## O que cada caso demonstra
+
+| Projeto | Problema e decisão em destaque |
+| --- | --- |
+| [TripFlow](https://github.com/acamilateixeira/tripflow) | API Laravel de viagens corporativas. Locks para proteger o orçamento, idempotência para reenvios e outbox para publicar eventos após o commit. A demo usa fornecedor simulado. |
+| [Bora](https://github.com/acamilateixeira/Bora) | App criado a pedido da Prefeitura de Conceição do Mato Dentro (MG). Histórico de corridas por motorista, contato e acesso por órgão. O vínculo operacional é tratado separadamente da disponibilidade. |
+| [Livit Live Controller](https://acamilateixeira.github.io/camilat/#livit-live-controller) | Controlador local de TikTok LIVE para um Mac de 8 GB. Prévia separada da saída, motor compartilhado de jogos, extensão de fila musical e renderização adaptativa. O caso é público e o código é privado. |
+
+## Critérios de seleção e revisão
+
+1. **Começar pelo problema.** Explicar quem precisava da solução e o que dificultava a operação.
+2. **Relacionar a arquitetura ao efeito.** Cada decisão precisa explicar o que resolveu e em que condições funciona. Uma lista de tecnologias serve como referência, depois do contexto.
+3. **Conferir o que pode ser demonstrado.** Revisar código, testes ou guias antes de apresentar um recurso como implementado. Identificar demos, protótipos, integrações simuladas e diagramas.
+4. **Revisar PT e EN juntos.** A mesma mudança atualiza os dois idiomas. Antes de publicar, conferir os links e rodar lint, tipos, testes e build.
+
+## Arquitetura do portfólio
+
+```mermaid
+flowchart LR
+    Content["src/content · PT e EN"] --> Sections["Componentes Vue"]
+    Language["useLanguage · idioma e preferência local"] --> Sections
+    Sections --> Build["Vite · build estático"]
+    Build --> Pages["GitHub Pages"]
+```
+
+| Tecnologia | Papel |
+| --- | --- |
+| **Vue 3 e TypeScript** | Componentes por seção e tipos que exigem textos nos dois idiomas. |
+| **Vite** | Servidor local e build estático sob `/camilat/`. |
+| **Vitest e Vue Test Utils** | Testes de navegação, seleção de idioma, links e paridade de conteúdo. |
+| **ESLint e GitHub Actions** | Verificações em PRs, orçamento de JavaScript e publicação no GitHub Pages. |
+
+O conteúdo fica em [`src/content/`](src/content). Os componentes em [`src/components/`](src/components) cuidam da apresentação. [`useLanguage`](src/composables/useLanguage.ts) detecta o idioma, aplica o atributo `lang` e guarda a preferência quando o armazenamento local está disponível.
+
+## Rodar e verificar
+
+Use Node.js 22 e npm.
 
 ```bash
+git clone https://github.com/acamilateixeira/camilat.git
+cd camilat
 npm install
 npm run dev
 ```
 
-## Estrutura
+Abra a URL exibida pelo Vite. Para conferir uma alteração:
 
+```bash
+npm run lint
+npm run typecheck
+npm test
+npm run build
 ```
-src/
-├── content/        textos PT/EN, experiências e projetos (fonte única do conteúdo)
-├── composables/    useLanguage: idioma compartilhado entre componentes
-├── components/     uma seção do site por componente
-└── __tests__/      testes de componente e de paridade de conteúdo PT/EN
-```
 
-O conteúdo fica separado dos componentes: atualizar uma experiência ou um projeto
-é editar um arquivo em `src/content/`, e o teste de paridade falha se um dos
-idiomas ficar para trás.
-
-## CI/CD
-
-| Workflow | Quando | O que faz |
-|---|---|---|
-| `ci.yml` | push e PR | ESLint, `vue-tsc`, Vitest, build e orçamento de 150 kB de JS |
-| `pr-validation.yml` | PR | Título em Conventional Commits, descrição preenchida, alerta de PR grande |
-| `ai-review.yml` | PR | Revisão do Claude: conteúdo PT/EN, acessibilidade, responsividade e código |
-| `deploy.yml` | push na `main` | Build e publicação no GitHub Pages |
-
-Configuração única no GitHub:
-- **Pages:** Settings → Pages → Source: *GitHub Actions*.
-- **Revisão por IA:** Settings → Secrets and variables → Actions → `ANTHROPIC_API_KEY`.
-
-## Projetos em destaque
-
-- [TripFlow](https://github.com/acamilateixeira/tripflow) — API Laravel de viagens corporativas com outbox, RabbitMQ, Redis, testes e CI/CD.
+O CI verifica que o JavaScript gerado fica abaixo de 150 KiB. A validação de PR confere título e descrição. A revisão por IA é opcional e depende de `ANTHROPIC_API_KEY`. O deploy roda após mudanças na `main`, com **GitHub Actions** configurado como fonte do Pages. [Workflows](.github/workflows)

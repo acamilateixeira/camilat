@@ -35,6 +35,30 @@ describe('App', () => {
     expect(featured.get('a').attributes('href')).toBe('https://github.com/acamilateixeira/tripflow')
   })
 
+  it('destaca o Bora com link para o repositório', () => {
+    const wrapper = mount(App)
+    const bora = wrapper.findAll('[data-test="featured-project"]')[1]
+
+    expect(bora?.find('h3').text()).toBe('Bora')
+    expect(bora?.get('a').attributes('href')).toBe('https://github.com/acamilateixeira/Bora')
+  })
+
+  it('apresenta o Livit em ambos os idiomas sem link para o código privado', async () => {
+    const wrapper = mount(App)
+    const livit = wrapper.get('#livit-live-controller')
+
+    expect(livit.get('h3').text()).toBe('Livit Live Controller')
+    expect(livit.get('img').attributes('src')).toMatch(/livit-architecture\.svg$/)
+    expect(livit.text()).toContain('Estudo de caso público · código privado')
+    expect(livit.find('a').exists()).toBe(false)
+
+    useLanguage().setLanguage('en')
+    await nextTick()
+
+    expect(livit.text()).toContain('Public case study · private code')
+    expect(livit.get('img').attributes('alt')).toContain('Python server')
+  })
+
   it('aponta para o currículo do idioma selecionado', async () => {
     const wrapper = mount(App)
     const cv = () => wrapper.get('a[download]')

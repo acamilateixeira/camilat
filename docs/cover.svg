@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 290">
+  <rect width="1040" height="290" rx="24" fill="#f0ece3"/>
+  <path d="M746 0h294v290H663z" fill="#a62a30"/>
+  <g fill="none" stroke="#f8e2db">
+    <circle cx="905" cy="148" r="68" opacity=".55"/>
+    <circle cx="905" cy="148" r="102" opacity=".24"/>
+    <path d="M905 126v44m-22-22h44" stroke-width="2"/>
+  </g>
+  <g fill="#2b2626" font-family="system-ui,sans-serif">
+    <text x="56" y="69" fill="#a62a30" font-size="17" font-weight="700" letter-spacing="4">SOFTWARE ENGINEERING</text>
+    <text x="52" y="157" font-size="66" font-weight="720" letter-spacing="-3">Camila Teixeira</text>
+    <text x="56" y="215" font-size="22" letter-spacing="1">BACK-END · FULL STACK · CASE STUDIES</text>
+  </g>
+</svg>
