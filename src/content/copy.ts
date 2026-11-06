@@ -12,10 +12,48 @@ export const resumes: Localized = {
 }
 
 export const skills: SkillGroup[] = [
-  { title: { pt: 'Back-end', en: 'Back end' }, items: ['PHP 8 / Laravel', 'Node.js · TypeScript', 'APIs REST e integrações', 'Filas e mensageria (RabbitMQ)', 'SOLID · Design patterns'] },
-  { title: { pt: 'Dados', en: 'Data' }, items: ['MySQL · SQL Server · PostgreSQL', 'Oracle · PL/SQL', 'Redis', 'Modelagem e otimização de consultas'] },
-  { title: { pt: 'Engenharia', en: 'Engineering' }, items: ['Testes (PHPUnit, Pest, Jest)', 'CI/CD (GitHub Actions, GitLab)', 'Docker · Linux', 'AWS · Azure'] },
-  { title: { pt: 'Front-end, mobile e plataformas', en: 'Front end, mobile & platforms' }, items: ['React · Vue 3 · TypeScript', 'React Native · Supabase', 'Salesforce (Apex, LWC, Flows)', 'Oracle APEX', 'C# / .NET'] },
+  {
+    title: { pt: 'Back-end', en: 'Back end' },
+    items: {
+      pt: ['PHP 8 · Laravel', 'Node.js', 'C# · .NET · ASP.NET', 'Python', 'APIs REST · Swagger', 'Filas e mensageria (RabbitMQ)', 'SOLID · Design patterns'],
+      en: ['PHP 8 · Laravel', 'Node.js', 'C# · .NET · ASP.NET', 'Python', 'REST APIs · Swagger', 'Queues & messaging (RabbitMQ)', 'SOLID · Design patterns'],
+    },
+  },
+  {
+    title: { pt: 'Salesforce', en: 'Salesforce' },
+    items: {
+      pt: ['Apex · Triggers', 'Lightning Web Components · Aura', 'Visualforce', 'Flows · Process Builder', 'SOQL · SOSL', 'Sales Cloud', 'MuleSoft'],
+      en: ['Apex · Triggers', 'Lightning Web Components · Aura', 'Visualforce', 'Flows · Process Builder', 'SOQL · SOSL', 'Sales Cloud', 'MuleSoft'],
+    },
+  },
+  {
+    title: { pt: 'Front-end e mobile', en: 'Front end & mobile' },
+    items: {
+      pt: ['TypeScript · JavaScript', 'React · Vue 3 · Angular', 'React Native (Expo)', 'HTML · CSS · Tailwind', 'Material-UI · Chart.js', 'Vite', 'WordPress'],
+      en: ['TypeScript · JavaScript', 'React · Vue 3 · Angular', 'React Native (Expo)', 'HTML · CSS · Tailwind', 'Material-UI · Chart.js', 'Vite', 'WordPress'],
+    },
+  },
+  {
+    title: { pt: 'Dados', en: 'Data' },
+    items: {
+      pt: ['MySQL · SQL Server · PostgreSQL', 'Oracle · PL/SQL · Oracle APEX', 'Redis', 'Modelagem e otimização de consultas'],
+      en: ['MySQL · SQL Server · PostgreSQL', 'Oracle · PL/SQL · Oracle APEX', 'Redis', 'Data modeling & query optimization'],
+    },
+  },
+  {
+    title: { pt: 'Engenharia', en: 'Engineering' },
+    items: {
+      pt: ['Testes (PHPUnit, Pest, Jest, Vitest)', 'CI/CD (GitHub Actions, GitLab CI)', 'Git · ESLint', 'Docker · Linux'],
+      en: ['Testing (PHPUnit, Pest, Jest, Vitest)', 'CI/CD (GitHub Actions, GitLab CI)', 'Git · ESLint', 'Docker · Linux'],
+    },
+  },
+  {
+    title: { pt: 'Nuvem e métodos', en: 'Cloud & ways of working' },
+    items: {
+      pt: ['AWS · Azure', 'Supabase (Auth, Realtime, Edge Functions)', 'Ágil · Scrum', 'Figma'],
+      en: ['AWS · Azure', 'Supabase (Auth, Realtime, Edge Functions)', 'Agile · Scrum', 'Figma'],
+    },
+  },
 ]
 
 export const copy = {
@@ -46,9 +84,10 @@ export const copy = {
     earlier: 'Antes: estágio na Caixa Econômica Federal (2016–2017).',
     labelProjects: '02 / Projetos',
     projects: 'Projetos, da necessidade à arquitetura.',
-    projectNote: 'Uma API de viagens, um app para a operação de corridas de uma prefeitura e um controlador de lives. Cada caso mostra o problema e as decisões que deram forma à solução.',
+    projectNote: 'Uma API de viagens, um app para a operação de corridas de uma prefeitura, um controlador de lives e um sorteador em Angular. Cada caso mostra o problema e as decisões que deram forma à solução.',
     featured: 'Destaque',
     source: 'Ver código e documentação',
+    demo: 'Abrir demo',
     diagram: 'Diagrama ilustrativo',
     privateProject: 'Estudo de caso público · código privado',
     all: 'Todos os repositórios',
@@ -91,9 +130,10 @@ export const copy = {
     earlier: 'Earlier: internship at Caixa Econômica Federal (2016–2017).',
     labelProjects: '02 / Projects',
     projects: 'Projects, from problem to architecture.',
-    projectNote: 'A travel API, a municipal ride app, and a livestream controller. Each case covers the problem and the decisions that shaped the solution.',
+    projectNote: 'A travel API, a municipal ride app, a livestream controller, and an Angular draw tool. Each case covers the problem and the decisions that shaped the solution.',
     featured: 'Featured',
     source: 'View code and documentation',
+    demo: 'Open demo',
     diagram: 'Illustrative diagram',
     privateProject: 'Public case study · private code',
     all: 'All repositories',

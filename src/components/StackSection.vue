@@ -13,7 +13,7 @@ const { language, t } = useLanguage()
       <div v-for="group in skills" :key="group.title.en" class="skill-group">
         <h3>{{ group.title[language] }}</h3>
         <ul>
-          <li v-for="skill in group.items" :key="skill">{{ skill }}</li>
+          <li v-for="skill in group.items[language]" :key="skill">{{ skill }}</li>
         </ul>
       </div>
     </div>

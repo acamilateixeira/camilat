@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { copy } from '../content/copy'
+import { copy, skills } from '../content/copy'
 import { experiences } from '../content/experience'
 import { projects } from '../content/projects'
 
@@ -32,5 +32,11 @@ describe('conteúdo bilíngue', () => {
   it('lista a experiência atual primeiro', () => {
     expect(experiences[0]?.current).toBe(true)
     expect(experiences.filter((e) => e.current)).toHaveLength(1)
+  })
+
+  it('tem habilidades com a mesma quantidade de itens em PT e EN', () => {
+    for (const group of skills) {
+      expect(group.items.en).toHaveLength(group.items.pt.length)
+    }
   })
 })

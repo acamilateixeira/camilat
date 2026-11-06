@@ -16,6 +16,8 @@ export interface Project {
   name: string
   id: string
   repo?: string
+  /** Demo publicada (URL completa). */
+  demo?: string
   type: string
   stack: string
   description: Localized
@@ -28,5 +30,5 @@ export interface Project {
 
 export interface SkillGroup {
   title: Localized
-  items: string[]
+  items: Localized<string[]>
 }

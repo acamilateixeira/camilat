@@ -78,4 +78,13 @@ describe('App', () => {
     expect(details[0]?.attributes('open')).toBeDefined()
     expect(details[1]?.attributes('open')).toBeUndefined()
   })
+
+  it('mostra o Sorteador com demo publicada e código', () => {
+    const wrapper = mount(App)
+    const card = wrapper.get('#sorteador')
+
+    expect(card.get('h3').text()).toBe('Sorteador')
+    expect(card.get('[data-test="project-demo"]').attributes('href')).toBe('https://acamilateixeira.github.io/sorteador-web/')
+    expect(card.findAll('a').map((a) => a.attributes('href'))).toContain('https://github.com/acamilateixeira/sorteador-web')
+  })
 })
