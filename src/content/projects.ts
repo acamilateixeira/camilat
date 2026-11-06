@@ -133,8 +133,8 @@ export const projects: Project[] = [
     type: 'Back-end · Rust',
     stack: 'Rust · Axum · Tokio · Serde · GitHub Actions',
     description: {
-      pt: 'API que mede uso por projeto sem contar duas vezes quando o cliente reenvia. O mesmo evento enviado em paralelo conta uma vez, o mesmo id com conteúdo diferente devolve 409 e cada chave só enxerga o próprio projeto. Testes com 16 requisições simultâneas e uma demo contra o servidor rodam no CI.',
-      en: 'An API that meters usage per project without counting twice when clients retry. The same event sent in parallel counts once, the same id with different content returns 409, and each key only sees its own project. Tests with 16 concurrent requests and a demo against the running server run in CI.',
+      pt: 'API que mede uso por projeto sem contar duas vezes quando o cliente reenvia ou o processador cai. O mesmo evento enviado em paralelo conta uma vez, e o mesmo id com conteúdo diferente devolve 409. A projeção em lotes grava no analytics antes do checkpoint. Uma falha injetada entre as duas escritas e um reprocessamento completo mantêm o total, porque o uso conta IDs distintos. Testes e uma demo contra o servidor rodam no CI.',
+      en: 'An API that meters usage per project without counting twice when a client retries or the worker crashes. The same event sent in parallel counts once, and the same id with different content returns 409. Batch projection writes analytics before the checkpoint. An injected crash between those two writes and a full replay keep the total, because usage counts distinct ids. Tests and a demo against the running server run in CI.',
     },
   },
 ]
