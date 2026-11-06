@@ -16,6 +16,8 @@ export interface Project {
   name: string
   id: string
   repo?: string
+  /** Demo publicada (URL completa). */
+  demo?: string
   type: string
   stack: string
   description: Localized

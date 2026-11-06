@@ -44,7 +44,7 @@ const symbols = ['{ }', '↗', '</>']
       </article>
 
       <div v-if="others.length" class="project-grid">
-        <article v-for="(project, i) in others" :key="project.id" class="project-card">
+        <article v-for="(project, i) in others" :id="project.id" :key="project.id" class="project-card">
           <div :class="['project-art', `art-${i}`]">
             <span class="project-number">/ 0{{ i + featured.length + 1 }}</span>
             <span class="project-symbol" aria-hidden="true">{{ symbols[i % 3] }}</span>
@@ -54,7 +54,10 @@ const symbols = ['{ }', '↗', '</>']
             <h3>{{ project.name }}</h3>
             <p>{{ project.description[language] }}</p>
             <p class="project-stack">{{ project.stack }}</p>
-            <a v-if="project.repo" :href="repoUrl(project.repo)" target="_blank" rel="noopener noreferrer">
+            <a v-if="project.demo" :href="project.demo" target="_blank" rel="noopener noreferrer" data-test="project-demo">
+              {{ t.demo }}<span aria-hidden="true">↗</span>
+            </a>
+            <a v-if="project.repo" :class="{ 'link-after': project.demo }" :href="repoUrl(project.repo)" target="_blank" rel="noopener noreferrer">
               {{ t.source }}<span aria-hidden="true">↗</span>
             </a>
           </div>

@@ -87,4 +87,16 @@ export const projects: Project[] = [
       ],
     },
   },
+  {
+    id: 'sorteador',
+    name: 'Sorteador',
+    repo: 'sorteador-web',
+    demo: 'https://acamilateixeira.github.io/sorteador-web/',
+    type: 'Front-end · Angular',
+    stack: 'Angular 22 · TypeScript · Reactive Forms · Signals · Web Crypto · Vitest',
+    description: {
+      pt: 'Sorteio de nomes ou números para atividades e eventos, feito todo no navegador. O sorteio usa Web Crypto sem viés de módulo, remove nomes duplicados e evita repetir resultados entre rodadas. Testes e publicação no GitHub Pages rodam no GitHub Actions.',
+      en: 'A name and number draw for activities and events that runs entirely in the browser. It uses Web Crypto without modulo bias, removes duplicate names, and avoids repeating results across rounds. Tests and GitHub Pages deployment run on GitHub Actions.',
+    },
+  },
 ]
