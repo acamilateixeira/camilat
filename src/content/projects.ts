@@ -2,6 +2,33 @@ import type { Project } from './types'
 
 export const projects: Project[] = [
   {
+    id: 'gemp',
+    name: 'GEMP',
+    repo: 'GEMP',
+    type: 'Full Stack · Integrações',
+    featured: true,
+    symbol: '⫘',
+    stack: 'Go · net/http · React · TypeScript · Vite · GitHub Actions',
+    description: {
+      pt: 'Comparador de crédito fictício que consulta três provedores em paralelo. Uma taxa mensal menor pode vir com uma tarifa inicial maior, então o GEMP compara o custo total e mostra o que ainda dá para entregar quando um provedor demora ou cai.',
+      en: 'A fictional credit comparison tool that queries three providers in parallel. A lower monthly rate can come with a higher upfront fee, so GEMP compares total cost and shows what the UI can still deliver when a provider is slow or down.',
+    },
+    highlights: {
+      pt: [
+        'A interface Provider separa a comparação da origem das ofertas. Cada chamada roda em uma goroutine com context.Context e prazo próprio de 250 ms, e o cancelamento do cliente interrompe a busca.',
+        'Quando um provedor excede o prazo, a API devolve as ofertas válidas com status parcial e indica quem falhou. Sem nenhuma oferta, responde 503.',
+        'O servidor valida as cotações, normaliza os IDs por provedor para evitar colisões e ordena pelo custo total em centavos.',
+        'O front-end em React e TypeScript distingue espera, resposta parcial, indisponibilidade e falha de comunicação. Os testes rodam com o detector de corrida do Go no CI.',
+      ],
+      en: [
+        'A Provider interface separates comparison from where offers come from. Each call runs in a goroutine with context.Context and its own 250 ms deadline, and client cancellation stops the search.',
+        'When a provider times out, the API returns the valid offers with a partial status and names the provider that failed. With no offers left, it responds 503.',
+        'The server validates quotes, namespaces IDs by provider to avoid collisions, and ranks offers by total cost in cents.',
+        'The React and TypeScript UI distinguishes loading, partial results, full unavailability, and network failure. Tests run with Go\'s race detector in CI.',
+      ],
+    },
+  },
+  {
     id: 'tripflow',
     name: 'TripFlow',
     repo: 'tripflow',

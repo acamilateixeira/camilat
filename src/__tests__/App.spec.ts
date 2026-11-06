@@ -29,7 +29,7 @@ describe('App', () => {
 
   it('destaca o TripFlow com link para o repositório', () => {
     const wrapper = mount(App)
-    const featured = wrapper.get('[data-test="featured-project"]')
+    const featured = wrapper.findAll('[data-test="featured-project"]')[1]!
 
     expect(featured.find('h3').text()).toBe('TripFlow')
     expect(featured.get('a').attributes('href')).toBe('https://github.com/acamilateixeira/tripflow')
@@ -37,7 +37,7 @@ describe('App', () => {
 
   it('destaca o Bora com link para o repositório', () => {
     const wrapper = mount(App)
-    const bora = wrapper.findAll('[data-test="featured-project"]')[1]
+    const bora = wrapper.findAll('[data-test="featured-project"]')[2]
 
     expect(bora?.find('h3').text()).toBe('Bora')
     expect(bora?.get('a').attributes('href')).toBe('https://github.com/acamilateixeira/Bora')
@@ -86,5 +86,14 @@ describe('App', () => {
     expect(card.get('h3').text()).toBe('Sorteador')
     expect(card.get('[data-test="project-demo"]').attributes('href')).toBe('https://acamilateixeira.github.io/sorteador-web/')
     expect(card.findAll('a').map((a) => a.attributes('href'))).toContain('https://github.com/acamilateixeira/sorteador-web')
+  })
+
+  it('abre os projetos com o GEMP e link para o repositório', () => {
+    const wrapper = mount(App)
+    const gemp = wrapper.findAll('[data-test="featured-project"]')[0]!
+
+    expect(gemp.attributes('id')).toBe('gemp')
+    expect(gemp.get('h3').text()).toBe('GEMP')
+    expect(gemp.get('a').attributes('href')).toBe('https://github.com/acamilateixeira/GEMP')
   })
 })

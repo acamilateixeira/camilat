@@ -12,6 +12,7 @@ Portfólio de engenharia de software com foco em back-end e desenvolvimento full
 
 | Projeto | Problema e decisão em destaque |
 | --- | --- |
+| [GEMP](https://github.com/acamilateixeira/GEMP) | Comparador de crédito fictício em Go, React e TypeScript. Consulta três provedores em paralelo com prazo individual, mantém as ofertas válidas quando um falha e ordena pelo custo total. |
 | [TripFlow](https://github.com/acamilateixeira/tripflow) | API Laravel de viagens corporativas. Locks para proteger o orçamento, idempotência para reenvios e outbox para publicar eventos após o commit. A demo usa fornecedor simulado. |
 | [Bora](https://github.com/acamilateixeira/Bora) | App criado a pedido da Prefeitura de Conceição do Mato Dentro (MG). Histórico de corridas por motorista, contato e acesso por órgão. O vínculo operacional é tratado separadamente da disponibilidade. |
 | [Livit Live Controller](https://acamilateixeira.github.io/camilat/#livit-live-controller) | Controlador local de TikTok LIVE para um Mac de 8 GB. Prévia separada da saída, motor compartilhado de jogos, extensão de fila musical e renderização adaptativa. O caso é público e o código é privado. |

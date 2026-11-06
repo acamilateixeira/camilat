@@ -33,8 +33,9 @@
 .project-card.featured .project-art{height:auto;min-height:260px}
 .art-featured{background:#2b2b27;color:#f1d4d1}
 .art-featured .project-symbol{font-size:84px}
-.art-featured-1{background:#ad2c2e;color:#f6e3df}
-.art-featured-2{background:#282235;color:#ece4f8}
+.art-featured-gemp{background:#1f3a34;color:#d9efe7}
+.art-featured-bora{background:#ad2c2e;color:#f6e3df}
+.art-featured-livit-live-controller{background:#282235;color:#ece4f8}
 .project-diagram{width:min(86%,360px);margin:48px 0;text-align:center;z-index:1}
 .project-diagram img{display:block;width:100%;height:auto}
 .project-diagram figcaption{font-size:10px;margin-top:6px}
