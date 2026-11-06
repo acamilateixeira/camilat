@@ -19,8 +19,8 @@ const symbols = ['{ }', '↗', '</>']
       <h2>{{ t.projects }}</h2>
       <p class="section-intro">{{ t.projectNote }}</p>
 
-      <article v-for="(project, i) in featured" :id="project.id" :key="project.id" class="project-card featured" data-test="featured-project">
-        <div :class="['project-art', 'art-featured', `art-featured-${i}`]">
+      <article v-for="project in featured" :id="project.id" :key="project.id" class="project-card featured" data-test="featured-project">
+        <div :class="['project-art', 'art-featured', `art-featured-${project.id}`]">
           <span class="project-number">{{ t.featured }}</span>
           <figure v-if="project.diagram" class="project-diagram">
             <img :src="assetBase + project.diagram.file" :alt="project.diagram.alt[language]" width="360" height="260" loading="lazy">

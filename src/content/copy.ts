@@ -15,8 +15,8 @@ export const skills: SkillGroup[] = [
   {
     title: { pt: 'Back-end', en: 'Back end' },
     items: {
-      pt: ['PHP 8 · Laravel', 'Node.js', 'C# · .NET · ASP.NET', 'Python', 'APIs REST · Swagger', 'Filas e mensageria (RabbitMQ)', 'SOLID · Design patterns'],
-      en: ['PHP 8 · Laravel', 'Node.js', 'C# · .NET · ASP.NET', 'Python', 'REST APIs · Swagger', 'Queues & messaging (RabbitMQ)', 'SOLID · Design patterns'],
+      pt: ['PHP 8 · Laravel', 'Node.js · Go', 'C# · .NET · ASP.NET', 'Python', 'APIs REST · Swagger', 'Filas e mensageria (RabbitMQ)', 'SOLID · Design patterns'],
+      en: ['PHP 8 · Laravel', 'Node.js · Go', 'C# · .NET · ASP.NET', 'Python', 'REST APIs · Swagger', 'Queues & messaging (RabbitMQ)', 'SOLID · Design patterns'],
     },
   },
   {
@@ -84,7 +84,7 @@ export const copy = {
     earlier: 'Antes: estágio na Caixa Econômica Federal (2016–2017).',
     labelProjects: '02 / Projetos',
     projects: 'Projetos, da necessidade à arquitetura.',
-    projectNote: 'Uma API de viagens, um app para a operação de corridas de uma prefeitura, um controlador de lives e um sorteador em Angular. Cada caso mostra o problema e as decisões que deram forma à solução.',
+    projectNote: 'Um comparador de crédito em Go, uma API de viagens, um app para a operação de corridas de uma prefeitura, um controlador de lives e um sorteador em Angular. Cada caso mostra o problema e as decisões que deram forma à solução.',
     featured: 'Destaque',
     source: 'Ver código e documentação',
     demo: 'Abrir demo',
@@ -130,7 +130,7 @@ export const copy = {
     earlier: 'Earlier: internship at Caixa Econômica Federal (2016–2017).',
     labelProjects: '02 / Projects',
     projects: 'Projects, from problem to architecture.',
-    projectNote: 'A travel API, a municipal ride app, a livestream controller, and an Angular draw tool. Each case covers the problem and the decisions that shaped the solution.',
+    projectNote: 'A credit comparison tool in Go, a travel API, a municipal ride app, a livestream controller, and an Angular draw tool. Each case covers the problem and the decisions that shaped the solution.',
     featured: 'Featured',
     source: 'View code and documentation',
     demo: 'Open demo',
