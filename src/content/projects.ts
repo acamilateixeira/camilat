@@ -120,10 +120,10 @@ export const projects: Project[] = [
     repo: 'sorteador-web',
     demo: 'https://acamilateixeira.github.io/sorteador-web/',
     type: 'Front-end · Angular',
-    stack: 'Angular 22 · TypeScript · Reactive Forms · Signals · Web Crypto · Vitest',
+    stack: 'Angular 22 · TypeScript · Signals · Web Crypto (SHA-256) · Vitest · GitHub Actions',
     description: {
-      pt: 'Sorteio de nomes ou números para atividades e eventos, feito todo no navegador. O sorteio usa Web Crypto sem viés de módulo, remove nomes duplicados e evita repetir resultados entre rodadas. Testes e publicação no GitHub Pages rodam no GitHub Actions.',
-      en: 'A name and number draw for activities and events that runs entirely in the browser. It uses Web Crypto without modulo bias, removes duplicate names, and avoids repeating results across rounds. Tests and GitHub Pages deployment run on GitHub Actions.',
+      pt: 'Sorteio de nomes ou números que roda no navegador e pode ser auditado. Antes de sortear, o app publica um compromisso SHA-256 da semente, da lista e da quantidade. O público pode adicionar uma contribuição que entra na semente. O resultado sai com um comprovante que qualquer pessoa verifica pelo link, e listas ou resultados adulterados são detectados.',
+      en: 'A browser-based name and number draw that can be audited. Before drawing, the app publishes a SHA-256 commitment to the seed, the list, and the count. The audience can add a contribution that goes into the seed. The result comes with a receipt that anyone can verify from a link, and tampered lists or results are detected.',
     },
   },
 ]
