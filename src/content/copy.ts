@@ -15,29 +15,43 @@ export const skills: SkillGroup[] = [
   {
     title: { pt: 'Back-end', en: 'Back end' },
     items: {
-      pt: ['PHP 8 / Laravel', 'Node.js', 'C# / .NET · Python', 'APIs REST e integrações', 'Filas e mensageria (RabbitMQ)', 'SOLID · Design patterns'],
-      en: ['PHP 8 / Laravel', 'Node.js', 'C# / .NET · Python', 'REST APIs & integrations', 'Queues & messaging (RabbitMQ)', 'SOLID · Design patterns'],
+      pt: ['PHP 8 · Laravel', 'Node.js', 'C# · .NET · ASP.NET', 'Python', 'APIs REST · Swagger', 'Filas e mensageria (RabbitMQ)', 'SOLID · Design patterns'],
+      en: ['PHP 8 · Laravel', 'Node.js', 'C# · .NET · ASP.NET', 'Python', 'REST APIs · Swagger', 'Queues & messaging (RabbitMQ)', 'SOLID · Design patterns'],
+    },
+  },
+  {
+    title: { pt: 'Salesforce', en: 'Salesforce' },
+    items: {
+      pt: ['Apex · Triggers', 'Lightning Web Components · Aura', 'Visualforce', 'Flows · Process Builder', 'SOQL · SOSL', 'Sales Cloud', 'MuleSoft'],
+      en: ['Apex · Triggers', 'Lightning Web Components · Aura', 'Visualforce', 'Flows · Process Builder', 'SOQL · SOSL', 'Sales Cloud', 'MuleSoft'],
     },
   },
   {
     title: { pt: 'Front-end e mobile', en: 'Front end & mobile' },
     items: {
-      pt: ['TypeScript · JavaScript', 'React · Vue 3 · Angular', 'React Native (Expo)', 'HTML · CSS'],
-      en: ['TypeScript · JavaScript', 'React · Vue 3 · Angular', 'React Native (Expo)', 'HTML · CSS'],
+      pt: ['TypeScript · JavaScript', 'React · Vue 3 · Angular', 'React Native (Expo)', 'HTML · CSS · Tailwind', 'Material-UI · Chart.js', 'Vite', 'WordPress'],
+      en: ['TypeScript · JavaScript', 'React · Vue 3 · Angular', 'React Native (Expo)', 'HTML · CSS · Tailwind', 'Material-UI · Chart.js', 'Vite', 'WordPress'],
     },
   },
   {
     title: { pt: 'Dados', en: 'Data' },
     items: {
-      pt: ['MySQL · SQL Server · PostgreSQL', 'Oracle · PL/SQL', 'Redis', 'Modelagem e otimização de consultas'],
-      en: ['MySQL · SQL Server · PostgreSQL', 'Oracle · PL/SQL', 'Redis', 'Data modeling & query optimization'],
+      pt: ['MySQL · SQL Server · PostgreSQL', 'Oracle · PL/SQL · Oracle APEX', 'Redis', 'Modelagem e otimização de consultas'],
+      en: ['MySQL · SQL Server · PostgreSQL', 'Oracle · PL/SQL · Oracle APEX', 'Redis', 'Data modeling & query optimization'],
     },
   },
   {
-    title: { pt: 'Engenharia e plataformas', en: 'Engineering & platforms' },
+    title: { pt: 'Engenharia', en: 'Engineering' },
     items: {
-      pt: ['Testes (PHPUnit, Pest, Jest, Vitest)', 'CI/CD (GitHub Actions, GitLab CI)', 'Docker · Linux · AWS · Azure', 'Supabase (Auth, Realtime, Edge Functions)', 'Salesforce (Apex, LWC, Flows) · Oracle APEX'],
-      en: ['Testing (PHPUnit, Pest, Jest, Vitest)', 'CI/CD (GitHub Actions, GitLab CI)', 'Docker · Linux · AWS · Azure', 'Supabase (Auth, Realtime, Edge Functions)', 'Salesforce (Apex, LWC, Flows) · Oracle APEX'],
+      pt: ['Testes (PHPUnit, Pest, Jest, Vitest)', 'CI/CD (GitHub Actions, GitLab CI)', 'Git · ESLint', 'Docker · Linux'],
+      en: ['Testing (PHPUnit, Pest, Jest, Vitest)', 'CI/CD (GitHub Actions, GitLab CI)', 'Git · ESLint', 'Docker · Linux'],
+    },
+  },
+  {
+    title: { pt: 'Nuvem e métodos', en: 'Cloud & ways of working' },
+    items: {
+      pt: ['AWS · Azure', 'Supabase (Auth, Realtime, Edge Functions)', 'Ágil · Scrum', 'Figma'],
+      en: ['AWS · Azure', 'Supabase (Auth, Realtime, Edge Functions)', 'Agile · Scrum', 'Figma'],
     },
   },
 ]
