@@ -96,4 +96,12 @@ describe('App', () => {
     expect(gemp.get('h3').text()).toBe('GEMP')
     expect(gemp.get('a').attributes('href')).toBe('https://github.com/acamilateixeira/GEMP')
   })
+
+  it('mostra o MeterTrail com link para o repositório', () => {
+    const wrapper = mount(App)
+    const card = wrapper.get('#metertrail')
+
+    expect(card.get('h3').text()).toBe('MeterTrail')
+    expect(card.findAll('a').map((a) => a.attributes('href'))).toContain('https://github.com/acamilateixeira/metertrail')
+  })
 })

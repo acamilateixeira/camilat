@@ -126,4 +126,15 @@ export const projects: Project[] = [
       en: 'A browser-based name and number draw that can be audited. Before drawing, the app publishes a SHA-256 commitment to the seed, the list, and the count. The audience can add a contribution that goes into the seed. The result comes with a receipt that anyone can verify from a link, and tampered lists or results are detected.',
     },
   },
+  {
+    id: 'metertrail',
+    name: 'MeterTrail',
+    repo: 'metertrail',
+    type: 'Back-end · Rust',
+    stack: 'Rust · Axum · Tokio · Serde · GitHub Actions',
+    description: {
+      pt: 'API que mede uso por projeto sem contar duas vezes quando o cliente reenvia. O mesmo evento enviado em paralelo conta uma vez, o mesmo id com conteúdo diferente devolve 409 e cada chave só enxerga o próprio projeto. Testes com 16 requisições simultâneas e uma demo contra o servidor rodam no CI.',
+      en: 'An API that meters usage per project without counting twice when clients retry. The same event sent in parallel counts once, the same id with different content returns 409, and each key only sees its own project. Tests with 16 concurrent requests and a demo against the running server run in CI.',
+    },
+  },
 ]
