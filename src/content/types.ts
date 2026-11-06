@@ -30,5 +30,5 @@ export interface Project {
 
 export interface SkillGroup {
   title: Localized
-  items: string[]
+  items: Localized<string[]>
 }

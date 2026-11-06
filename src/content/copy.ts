@@ -12,10 +12,34 @@ export const resumes: Localized = {
 }
 
 export const skills: SkillGroup[] = [
-  { title: { pt: 'Back-end', en: 'Back end' }, items: ['PHP 8 / Laravel', 'Node.js · TypeScript', 'APIs REST e integrações', 'Filas e mensageria (RabbitMQ)', 'SOLID · Design patterns'] },
-  { title: { pt: 'Dados', en: 'Data' }, items: ['MySQL · SQL Server · PostgreSQL', 'Oracle · PL/SQL', 'Redis', 'Modelagem e otimização de consultas'] },
-  { title: { pt: 'Engenharia', en: 'Engineering' }, items: ['Testes (PHPUnit, Pest, Jest)', 'CI/CD (GitHub Actions, GitLab)', 'Docker · Linux', 'AWS · Azure'] },
-  { title: { pt: 'Front-end, mobile e plataformas', en: 'Front end, mobile & platforms' }, items: ['React · Vue 3 · TypeScript', 'React Native · Supabase', 'Salesforce (Apex, LWC, Flows)', 'Oracle APEX', 'C# / .NET'] },
+  {
+    title: { pt: 'Back-end', en: 'Back end' },
+    items: {
+      pt: ['PHP 8 / Laravel', 'Node.js', 'C# / .NET · Python', 'APIs REST e integrações', 'Filas e mensageria (RabbitMQ)', 'SOLID · Design patterns'],
+      en: ['PHP 8 / Laravel', 'Node.js', 'C# / .NET · Python', 'REST APIs & integrations', 'Queues & messaging (RabbitMQ)', 'SOLID · Design patterns'],
+    },
+  },
+  {
+    title: { pt: 'Front-end e mobile', en: 'Front end & mobile' },
+    items: {
+      pt: ['TypeScript · JavaScript', 'React · Vue 3 · Angular', 'React Native (Expo)', 'HTML · CSS'],
+      en: ['TypeScript · JavaScript', 'React · Vue 3 · Angular', 'React Native (Expo)', 'HTML · CSS'],
+    },
+  },
+  {
+    title: { pt: 'Dados', en: 'Data' },
+    items: {
+      pt: ['MySQL · SQL Server · PostgreSQL', 'Oracle · PL/SQL', 'Redis', 'Modelagem e otimização de consultas'],
+      en: ['MySQL · SQL Server · PostgreSQL', 'Oracle · PL/SQL', 'Redis', 'Data modeling & query optimization'],
+    },
+  },
+  {
+    title: { pt: 'Engenharia e plataformas', en: 'Engineering & platforms' },
+    items: {
+      pt: ['Testes (PHPUnit, Pest, Jest, Vitest)', 'CI/CD (GitHub Actions, GitLab CI)', 'Docker · Linux · AWS · Azure', 'Supabase (Auth, Realtime, Edge Functions)', 'Salesforce (Apex, LWC, Flows) · Oracle APEX'],
+      en: ['Testing (PHPUnit, Pest, Jest, Vitest)', 'CI/CD (GitHub Actions, GitLab CI)', 'Docker · Linux · AWS · Azure', 'Supabase (Auth, Realtime, Edge Functions)', 'Salesforce (Apex, LWC, Flows) · Oracle APEX'],
+    },
+  },
 ]
 
 export const copy = {
