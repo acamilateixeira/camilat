@@ -17,6 +17,7 @@ Portfólio de engenharia de software com foco em back-end e desenvolvimento full
 | [Bora](https://github.com/acamilateixeira/Bora) | App criado a pedido da Prefeitura de Conceição do Mato Dentro (MG). Histórico de corridas por motorista, contato e acesso por órgão. O vínculo operacional é tratado separadamente da disponibilidade. |
 | [Livit Live Controller](https://acamilateixeira.github.io/camilat/#livit-live-controller) | Controlador local de TikTok LIVE para um Mac de 8 GB. Prévia separada da saída, motor compartilhado de jogos, extensão de fila musical e renderização adaptativa. O caso é público e o código é privado. |
 | [Sorteador](https://github.com/acamilateixeira/sorteador-web) · [demo](https://acamilateixeira.github.io/sorteador-web/) | Sorteio auditável em Angular 22: compromisso SHA-256 antes do sorteio, contribuição pública na semente e comprovante verificável por link. 18 testes, incluindo vetor fixo e adulterações, rodam no GitHub Actions. |
+| [MeterTrail](https://github.com/acamilateixeira/metertrail) · [wiki](https://github.com/acamilateixeira/metertrail/wiki/Inicio) | Medição de uso de API em Rust. O mesmo evento conta uma vez mesmo com reenvios simultâneos, o mesmo id com outro conteúdo devolve 409 e cada chave só enxerga o próprio projeto. Testes e uma demo contra o servidor rodam no CI. |
 
 ## Outros projetos e próximos casos
 
@@ -24,7 +25,6 @@ Portfólio de engenharia de software com foco em back-end e desenvolvimento full
 | --- | --- | --- |
 | [Emppo Finance](https://github.com/acamilateixeira/emppo-finance) | API funcional local | Node.js e Fastify com lançamentos em SQLite, validação e cálculo do saldo em centavos. |
 | [Release Relay](https://github.com/acamilateixeira/release-relay) | Demo local do contrato | App planejado no Lovable para entregar ao cliente um link com execução do GitHub, revisão do site e checklist por commit. |
-| [MeterTrail](https://github.com/acamilateixeira/metertrail) | API Rust local | Serviço em Rust para medir uso de API sem duplicar contagens após falhas e reenvios. |
 | [GMPE](https://github.com/acamilateixeira/gmpe) | Demo local de venda | Gestão por empresa para pequenas lojas, com venda, baixa de estoque, caixa e contas a receber na mesma operação. |
 | [Mão na Obra](https://github.com/acamilateixeira/maonaobra) | Protótipo e proposta | Landing page para um profissional da construção em Portugal. Versão React inicial e evolução planejada para C# e ASP.NET Core. |
 | [MPN](https://github.com/acamilateixeira/MPN) | Legado e proposta | Agenda de serviços com migração proposta para Kotlin. O recorte mede o que acontece quando duas reservas disputam o mesmo horário. |
