@@ -9,6 +9,8 @@ const featured = computed(() => projects.filter((p) => p.featured))
 const others = computed(() => projects.filter((p) => !p.featured))
 const assetBase = import.meta.env.BASE_URL
 const repoUrl = (repo: string) => `${contact.github}/${repo}`
+// A demo abre no idioma que a pessoa escolheu no portfólio.
+const demoUrl = (demo: string) => `${demo}${demo.includes('?') ? '&' : '?'}lang=${language.value}`
 const symbols = ['{ }', '↗', '</>']
 </script>
 
@@ -36,7 +38,7 @@ const symbols = ['{ }', '↗', '</>']
             <li v-for="item in project.highlights[language]" :key="item">{{ item }}</li>
           </ul>
           <p class="project-stack">{{ project.stack }}</p>
-          <a v-if="project.demo" :href="project.demo" target="_blank" rel="noopener noreferrer" data-test="project-demo">
+          <a v-if="project.demo" :href="demoUrl(project.demo)" target="_blank" rel="noopener noreferrer" data-test="project-demo">
             {{ t.demo }}<span aria-hidden="true">↗</span>
           </a>
           <a v-if="project.repo" :class="{ 'link-after': project.demo }" :href="repoUrl(project.repo)" target="_blank" rel="noopener noreferrer" data-test="project-repo">
@@ -57,7 +59,7 @@ const symbols = ['{ }', '↗', '</>']
             <h3>{{ project.name }}</h3>
             <p>{{ project.description[language] }}</p>
             <p class="project-stack">{{ project.stack }}</p>
-            <a v-if="project.demo" :href="project.demo" target="_blank" rel="noopener noreferrer" data-test="project-demo">
+            <a v-if="project.demo" :href="demoUrl(project.demo)" target="_blank" rel="noopener noreferrer" data-test="project-demo">
               {{ t.demo }}<span aria-hidden="true">↗</span>
             </a>
             <a v-if="project.repo" :class="{ 'link-after': project.demo }" :href="repoUrl(project.repo)" target="_blank" rel="noopener noreferrer">

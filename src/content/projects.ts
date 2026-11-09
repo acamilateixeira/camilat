@@ -33,6 +33,7 @@ export const projects: Project[] = [
     id: 'tripflow',
     name: 'TripFlow',
     repo: 'tripflow',
+    demo: 'https://acamilateixeira.github.io/Tripflow/',
     type: 'Back-end',
     featured: true,
     symbol: '⇄',
