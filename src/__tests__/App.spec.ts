@@ -32,7 +32,7 @@ describe('App', () => {
     const featured = wrapper.findAll('[data-test="featured-project"]')[1]!
 
     expect(featured.find('h3').text()).toBe('TripFlow')
-    expect(featured.get('a').attributes('href')).toBe('https://github.com/acamilateixeira/tripflow')
+    expect(featured.get('[data-test="project-repo"]').attributes('href')).toBe('https://github.com/acamilateixeira/tripflow')
   })
 
   it('destaca o Bora com link para o repositório', () => {
@@ -40,7 +40,7 @@ describe('App', () => {
     const bora = wrapper.findAll('[data-test="featured-project"]')[2]
 
     expect(bora?.find('h3').text()).toBe('Bora')
-    expect(bora?.get('a').attributes('href')).toBe('https://github.com/acamilateixeira/Bora')
+    expect(bora?.get('[data-test="project-repo"]').attributes('href')).toBe('https://github.com/acamilateixeira/Bora')
   })
 
   it('apresenta o Livit em ambos os idiomas sem link para o código privado', async () => {
@@ -94,7 +94,8 @@ describe('App', () => {
 
     expect(gemp.attributes('id')).toBe('gemp')
     expect(gemp.get('h3').text()).toBe('GEMP')
-    expect(gemp.get('a').attributes('href')).toBe('https://github.com/acamilateixeira/GEMP')
+    expect(gemp.get('[data-test="project-repo"]').attributes('href')).toBe('https://github.com/acamilateixeira/GEMP')
+    expect(gemp.get('[data-test="project-demo"]').attributes('href')).toBe('https://acamilateixeira.github.io/GEMP/')
   })
 
   it('mostra o MeterTrail com link para o repositório', () => {
