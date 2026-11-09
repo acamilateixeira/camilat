@@ -58,6 +58,7 @@
 .language-gate-name{font:800 28px/1 var(--display);letter-spacing:-1.2px;margin-bottom:36px}
 .language-gate-name span{color:var(--red)}
 .language-gate h1{font-size:clamp(24px,4vw,34px);letter-spacing:-1px;font-weight:600;line-height:1.3;margin-bottom:32px}
+.language-gate h1 span{white-space:nowrap}
 .language-gate-divider{color:var(--red);margin:0 10px}
 .language-gate-options{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .language-gate-options button{display:flex;flex-direction:column;gap:6px;align-items:flex-start;text-align:left;padding:22px 20px;border:1px solid var(--line);border-radius:6px;background:white;color:var(--ink);cursor:pointer;transition:border-color .2s,transform .2s}

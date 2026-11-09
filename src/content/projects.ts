@@ -5,6 +5,7 @@ export const projects: Project[] = [
     id: 'gemp',
     name: 'GEMP',
     repo: 'GEMP',
+    demo: 'https://acamilateixeira.github.io/GEMP/',
     type: 'Full Stack · Integrações',
     featured: true,
     symbol: '⫘',
