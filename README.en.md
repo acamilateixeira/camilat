@@ -2,7 +2,7 @@
 
 # Camila Teixeira's portfolio
 
-[Português](README.md) · **English** · [Open the portfolio](https://acamilateixeira.github.io/camilat/)
+[Português](README.md) · **English** · [Open the portfolio](https://acamilateixeira.github.io/camilat/?lang=en)
 
 [![CI](https://github.com/acamilateixeira/camilat/actions/workflows/ci.yml/badge.svg)](https://github.com/acamilateixeira/camilat/actions/workflows/ci.yml)
 
@@ -15,7 +15,7 @@ A software engineering portfolio focused on back-end and full-stack work. Each c
 | [GEMP](https://github.com/acamilateixeira/GEMP) | A fictional credit comparison tool in Go, React, and TypeScript. It queries three providers in parallel with per-provider deadlines, keeps valid offers when one fails, and ranks by total cost. |
 | [TripFlow](https://github.com/acamilateixeira/tripflow) | A Laravel corporate travel API. Locks protect the budget, idempotency handles retries, and an outbox publishes events after commit. The demo uses a simulated supplier. |
 | [Bora](https://github.com/acamilateixeira/Bora) | An app requested by the municipality of Conceição do Mato Dentro, Brazil. It tracks rides per driver, contact details, and department-level access. Operational membership is separate from availability. |
-| [Livit Live Controller](https://acamilateixeira.github.io/camilat/#livit-live-controller) | A local TikTok LIVE controller built for an 8 GB Mac. It separates preview from broadcast output and includes a shared game engine, a music queue extension, and adaptive rendering. The case study is public and the source code is private. |
+| [Livit Live Controller](https://acamilateixeira.github.io/camilat/?lang=en#livit-live-controller) | A local TikTok LIVE controller built for an 8 GB Mac. It separates preview from broadcast output and includes a shared game engine, a music queue extension, and adaptive rendering. The case study is public and the source code is private. |
 | [Sorteador](https://github.com/acamilateixeira/sorteador-web) · [demo](https://acamilateixeira.github.io/sorteador-web/) | An auditable draw built with Angular 22: a SHA-256 commitment before the draw, a public contribution in the seed, and a receipt anyone can verify from a link. 18 tests, including a fixed vector and tampering cases, run on GitHub Actions. |
 | [MeterTrail](https://github.com/acamilateixeira/metertrail) · [wiki](https://github.com/acamilateixeira/metertrail/wiki) | API usage metering in Rust. The same event counts once under concurrent retries, and the same id with different content returns 409. If the worker crashes between the analytics write and the checkpoint, the batch is written again and the total holds. Tests, the injected crash, and the replay run in CI. |
 
@@ -54,7 +54,7 @@ flowchart LR
 | **Vitest and Vue Test Utils** | Tests for navigation, language selection, links, and content parity. |
 | **ESLint and GitHub Actions** | Pull request checks, a JavaScript size budget, and GitHub Pages deployment. |
 
-Copy lives in [`src/content/`](src/content). Components in [`src/components/`](src/components) handle presentation. [`useLanguage`](src/composables/useLanguage.ts) detects the locale, sets the `lang` attribute, and saves the preference when local storage is available.
+Copy lives in [`src/content/`](src/content). Components in [`src/components/`](src/components) handle presentation. On a first visit the site shows only a choice between Portuguese and English, so nobody lands on the portfolio in the wrong language. A link with `?lang=pt` or `?lang=en` skips the choice (the CVs and these READMEs use that format). [`useLanguage`](src/composables/useLanguage.ts) sets the `lang` attribute and saves the choice when local storage is available.
 
 ## Run and verify
 

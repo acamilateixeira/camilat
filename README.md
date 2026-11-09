@@ -2,7 +2,7 @@
 
 # Portfólio de Camila Teixeira
 
-**Português** · [English](README.en.md) · [Abrir portfólio](https://acamilateixeira.github.io/camilat/)
+**Português** · [English](README.en.md) · [Abrir portfólio](https://acamilateixeira.github.io/camilat/?lang=pt)
 
 [![CI](https://github.com/acamilateixeira/camilat/actions/workflows/ci.yml/badge.svg)](https://github.com/acamilateixeira/camilat/actions/workflows/ci.yml)
 
@@ -15,7 +15,7 @@ Portfólio de engenharia de software com foco em back-end e desenvolvimento full
 | [GEMP](https://github.com/acamilateixeira/GEMP) | Comparador de crédito fictício em Go, React e TypeScript. Consulta três provedores em paralelo com prazo individual, mantém as ofertas válidas quando um falha e ordena pelo custo total. |
 | [TripFlow](https://github.com/acamilateixeira/tripflow) | API Laravel de viagens corporativas. Locks para proteger o orçamento, idempotência para reenvios e outbox para publicar eventos após o commit. A demo usa fornecedor simulado. |
 | [Bora](https://github.com/acamilateixeira/Bora) | App criado a pedido da Prefeitura de Conceição do Mato Dentro (MG). Histórico de corridas por motorista, contato e acesso por órgão. O vínculo operacional é tratado separadamente da disponibilidade. |
-| [Livit Live Controller](https://acamilateixeira.github.io/camilat/#livit-live-controller) | Controlador local de TikTok LIVE para um Mac de 8 GB. Prévia separada da saída, motor compartilhado de jogos, extensão de fila musical e renderização adaptativa. O caso é público e o código é privado. |
+| [Livit Live Controller](https://acamilateixeira.github.io/camilat/?lang=pt#livit-live-controller) | Controlador local de TikTok LIVE para um Mac de 8 GB. Prévia separada da saída, motor compartilhado de jogos, extensão de fila musical e renderização adaptativa. O caso é público e o código é privado. |
 | [Sorteador](https://github.com/acamilateixeira/sorteador-web) · [demo](https://acamilateixeira.github.io/sorteador-web/) | Sorteio auditável em Angular 22: compromisso SHA-256 antes do sorteio, contribuição pública na semente e comprovante verificável por link. 18 testes, incluindo vetor fixo e adulterações, rodam no GitHub Actions. |
 | [MeterTrail](https://github.com/acamilateixeira/metertrail) · [wiki](https://github.com/acamilateixeira/metertrail/wiki/Inicio) | Medição de uso de API em Rust. O mesmo evento conta uma vez com reenvios simultâneos, e o mesmo id com outro conteúdo devolve 409. Se o processador cai entre a escrita no analytics e o checkpoint, o lote é gravado de novo e o total não muda. Testes, falha injetada e reprocessamento rodam no CI. |
 
@@ -54,7 +54,7 @@ flowchart LR
 | **Vitest e Vue Test Utils** | Testes de navegação, seleção de idioma, links e paridade de conteúdo. |
 | **ESLint e GitHub Actions** | Verificações em PRs, orçamento de JavaScript e publicação no GitHub Pages. |
 
-O conteúdo fica em [`src/content/`](src/content). Os componentes em [`src/components/`](src/components) cuidam da apresentação. [`useLanguage`](src/composables/useLanguage.ts) detecta o idioma, aplica o atributo `lang` e guarda a preferência quando o armazenamento local está disponível.
+O conteúdo fica em [`src/content/`](src/content). Os componentes em [`src/components/`](src/components) cuidam da apresentação. Na primeira visita, o site mostra só a escolha entre português e inglês, para ninguém abrir o portfólio no idioma errado. Um link com `?lang=pt` ou `?lang=en` pula a escolha (os CVs e estes READMEs usam esse formato). [`useLanguage`](src/composables/useLanguage.ts) aplica o atributo `lang` e guarda a escolha quando o armazenamento local está disponível.
 
 ## Rodar e verificar
 
