@@ -42,6 +42,7 @@ describe('App', () => {
 
     expect(bora?.find('h3').text()).toBe('Bora')
     expect(bora?.get('[data-test="project-repo"]').attributes('href')).toBe('https://github.com/acamilateixeira/Bora')
+    expect(bora?.get('[data-test="project-demo"]').attributes('href')).toBe('https://acamilateixeira.github.io/Bora/?lang=pt')
   })
 
   it('apresenta o Livit em ambos os idiomas sem link para o código privado', async () => {
