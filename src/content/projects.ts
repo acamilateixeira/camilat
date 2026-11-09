@@ -61,6 +61,7 @@ export const projects: Project[] = [
     id: 'bora',
     name: 'Bora',
     repo: 'Bora',
+    demo: 'https://acamilateixeira.github.io/Bora/',
     type: 'Full Stack · Mobile',
     featured: true,
     symbol: '⌖',
