@@ -33,6 +33,7 @@ describe('App', () => {
 
     expect(featured.find('h3').text()).toBe('TripFlow')
     expect(featured.get('[data-test="project-repo"]').attributes('href')).toBe('https://github.com/acamilateixeira/tripflow')
+    expect(featured.get('[data-test="project-demo"]').attributes('href')).toBe('https://acamilateixeira.github.io/Tripflow/?lang=pt')
   })
 
   it('destaca o Bora com link para o repositório', () => {
@@ -84,7 +85,7 @@ describe('App', () => {
     const card = wrapper.get('#sorteador')
 
     expect(card.get('h3').text()).toBe('Sorteador')
-    expect(card.get('[data-test="project-demo"]').attributes('href')).toBe('https://acamilateixeira.github.io/sorteador-web/')
+    expect(card.get('[data-test="project-demo"]').attributes('href')).toBe('https://acamilateixeira.github.io/sorteador-web/?lang=pt')
     expect(card.findAll('a').map((a) => a.attributes('href'))).toContain('https://github.com/acamilateixeira/sorteador-web')
   })
 
@@ -95,7 +96,7 @@ describe('App', () => {
     expect(gemp.attributes('id')).toBe('gemp')
     expect(gemp.get('h3').text()).toBe('GEMP')
     expect(gemp.get('[data-test="project-repo"]').attributes('href')).toBe('https://github.com/acamilateixeira/GEMP')
-    expect(gemp.get('[data-test="project-demo"]').attributes('href')).toBe('https://acamilateixeira.github.io/GEMP/')
+    expect(gemp.get('[data-test="project-demo"]').attributes('href')).toBe('https://acamilateixeira.github.io/GEMP/?lang=pt')
   })
 
   it('mostra o MeterTrail com link para o repositório', () => {
