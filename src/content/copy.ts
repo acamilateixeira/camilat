@@ -15,8 +15,22 @@ export const skills: SkillGroup[] = [
   {
     title: { pt: 'Back-end', en: 'Back end' },
     items: {
-      pt: ['PHP 8 · Laravel', 'Node.js · Go · Rust', 'C# · .NET · ASP.NET', 'Python', 'APIs REST · Swagger', 'Filas e mensageria (RabbitMQ)', 'SOLID · Design patterns'],
-      en: ['PHP 8 · Laravel', 'Node.js · Go · Rust', 'C# · .NET · ASP.NET', 'Python', 'REST APIs · Swagger', 'Queues & messaging (RabbitMQ)', 'SOLID · Design patterns'],
+      pt: ['PHP 8 · Laravel (Eloquent, filas, Sanctum)', 'Node.js (Fastify)', 'Go (goroutines, context.Context, WebAssembly)', 'Rust · C# · .NET · Python', 'APIs REST · OpenAPI/Swagger', 'Insomnia · Postman'],
+      en: ['PHP 8 · Laravel (Eloquent, queues, Sanctum)', 'Node.js (Fastify)', 'Go (goroutines, context.Context, WebAssembly)', 'Rust · C# · .NET · Python', 'REST APIs · OpenAPI/Swagger', 'Insomnia · Postman'],
+    },
+  },
+  {
+    title: { pt: 'Confiabilidade', en: 'Reliability' },
+    items: {
+      pt: ['Transações · SELECT … FOR UPDATE', 'Locks distribuídos no Redis', 'Idempotência (Idempotency-Key)', 'Transactional outbox e inbox · RabbitMQ', 'Compensação de falhas parciais', 'Timeouts, cancelamento e respostas parciais', 'Isolamento multi-tenant'],
+      en: ['Transactions · SELECT … FOR UPDATE', 'Redis distributed locks', 'Idempotency (Idempotency-Key)', 'Transactional outbox & inbox · RabbitMQ', 'Compensation for partial failures', 'Timeouts, cancellation & partial responses', 'Multi-tenant isolation'],
+    },
+  },
+  {
+    title: { pt: 'Dados', en: 'Data' },
+    items: {
+      pt: ['MySQL · SQL Server', 'PostgreSQL (Row Level Security)', 'Oracle · PL/SQL · Oracle APEX', 'Redis · SQLite', 'Modelagem e otimização de consultas'],
+      en: ['MySQL · SQL Server', 'PostgreSQL (Row Level Security)', 'Oracle · PL/SQL · Oracle APEX', 'Redis · SQLite', 'Data modeling & query optimization'],
     },
   },
   {
@@ -34,24 +48,24 @@ export const skills: SkillGroup[] = [
     },
   },
   {
-    title: { pt: 'Dados', en: 'Data' },
+    title: { pt: 'Testes e qualidade', en: 'Testing & quality' },
     items: {
-      pt: ['MySQL · SQL Server · PostgreSQL', 'Oracle · PL/SQL · Oracle APEX', 'Redis', 'Modelagem e otimização de consultas'],
-      en: ['MySQL · SQL Server · PostgreSQL', 'Oracle · PL/SQL · Oracle APEX', 'Redis', 'Data modeling & query optimization'],
+      pt: ['PHPUnit · Pest (incl. arquitetura)', 'Jest · Vitest · node:test', 'go test -race', 'Testes de concorrência (MySQL) e de RLS (PostgreSQL)', 'Larastan/PHPStan nível 8 · Pint · ESLint'],
+      en: ['PHPUnit · Pest (incl. architecture)', 'Jest · Vitest · node:test', 'go test -race', 'Concurrency tests (MySQL) & RLS tests (PostgreSQL)', 'Larastan/PHPStan level 8 · Pint · ESLint'],
     },
   },
   {
-    title: { pt: 'Engenharia', en: 'Engineering' },
+    title: { pt: 'DevOps e nuvem', en: 'DevOps & cloud' },
     items: {
-      pt: ['Testes (PHPUnit, Pest, Jest, Vitest)', 'CI/CD (GitHub Actions, GitLab CI)', 'Git · ESLint', 'Docker · Linux'],
-      en: ['Testing (PHPUnit, Pest, Jest, Vitest)', 'CI/CD (GitHub Actions, GitLab CI)', 'Git · ESLint', 'Docker · Linux'],
+      pt: ['Docker · Docker Compose', 'CI/CD (GitHub Actions, GitLab CI)', 'Git · Linux', 'AWS · Azure', 'Supabase (Auth, Realtime, Edge Functions)', 'k6 · testes de capacidade com cgroups'],
+      en: ['Docker · Docker Compose', 'CI/CD (GitHub Actions, GitLab CI)', 'Git · Linux', 'AWS · Azure', 'Supabase (Auth, Realtime, Edge Functions)', 'k6 · capacity testing with cgroups'],
     },
   },
   {
-    title: { pt: 'Nuvem e métodos', en: 'Cloud & ways of working' },
+    title: { pt: 'Práticas', en: 'Practices' },
     items: {
-      pt: ['AWS · Azure', 'Supabase (Auth, Realtime, Edge Functions)', 'Ágil · Scrum', 'Figma'],
-      en: ['AWS · Azure', 'Supabase (Auth, Realtime, Edge Functions)', 'Agile · Scrum', 'Figma'],
+      pt: ['SOLID · Clean Code', 'Camadas · portas e adaptadores', 'Máquinas de estado', 'ADRs', 'Ágil · Scrum · Figma', 'IA (Claude) com revisão por testes e diff'],
+      en: ['SOLID · Clean Code', 'Layers · ports & adapters', 'State machines', 'ADRs', 'Agile · Scrum · Figma', 'AI (Claude) validated by tests & diff review'],
     },
   },
 ]
@@ -65,11 +79,11 @@ export const copy = {
     eyebrow: 'Camila Teixeira / Software Engineer · Back-end e Full Stack',
     titleTop: 'Integrações que funcionam.',
     titleBottom: 'Legado que evolui.',
-    intro: 'Desenvolvedora back-end e full stack com 5 anos em sistemas financeiros, ERP, e-commerce nacional e aplicações para indústria e mineração. PHP/Laravel e Node.js no back-end, React, Vue e TypeScript no front-end, e integrações entre ERP, Salesforce e e-commerce. Trabalho do requisito à produção, incluindo modernização de legado e sustentação.',
+    intro: 'Desenvolvedora back-end e full stack com 5 anos em sistemas financeiros, ERP, e-commerce nacional e aplicações para indústria e mineração. PHP/Laravel e Node.js no back-end, React, Vue e TypeScript no front-end, e integrações entre ERP, Salesforce e e-commerce. Trabalho do requisito à produção, incluindo modernização de legado e sustentação. Nos projetos públicos, aplico controle de concorrência, idempotência, transactional outbox com RabbitMQ, Row Level Security no PostgreSQL e Go com context.Context, com testes que reproduzem a falha antes da correção.',
     location: 'Belo Horizonte, Brasil · híbrido ou remoto',
     cv: 'Baixar currículo',
     view: 'Ver projetos',
-    ribbon: ['PHP / LARAVEL', 'NODE.JS / REACT', 'INTEGRAÇÕES', 'MENSAGERIA', 'AWS / AZURE'],
+    ribbon: ['PHP / LARAVEL', 'NODE.JS / REACT', 'GO', 'INTEGRAÇÕES', 'MENSAGERIA', 'AWS / AZURE'],
     aboutTitle: 'Como eu trabalho.',
     principles: [
       { title: 'Consistência antes de velocidade', text: 'Em sistema financeiro e de ERP, um dado errado custa mais que uma entrega atrasada. Transação, idempotência e lock no lugar certo vêm primeiro.' },
@@ -111,11 +125,11 @@ export const copy = {
     eyebrow: 'Camila Teixeira / Software Engineer · Back end & Full Stack',
     titleTop: 'Integrations that work.',
     titleBottom: 'Legacy that evolves.',
-    intro: 'Back-end and full stack developer with 5 years in financial systems, ERP, nationwide e-commerce, and applications for industry and mining. PHP/Laravel and Node.js on the back end, React, Vue, and TypeScript on the front end, and integrations between ERP, Salesforce, and e-commerce. I work from requirements to production, including legacy modernization and production support.',
+    intro: 'Back-end and full stack developer with 5 years in financial systems, ERP, nationwide e-commerce, and applications for industry and mining. PHP/Laravel and Node.js on the back end, React, Vue, and TypeScript on the front end, and integrations between ERP, Salesforce, and e-commerce. I work from requirements to production, including legacy modernization and production support. In my public projects I apply concurrency control, idempotency, a transactional outbox with RabbitMQ, PostgreSQL Row Level Security, and Go with context.Context, with tests that reproduce a failure before the fix.',
     location: 'Belo Horizonte, Brazil · hybrid, remote, or open to relocation',
     cv: 'Download résumé',
     view: 'See projects',
-    ribbon: ['PHP / LARAVEL', 'NODE.JS / REACT', 'INTEGRATIONS', 'MESSAGING', 'AWS / AZURE'],
+    ribbon: ['PHP / LARAVEL', 'NODE.JS / REACT', 'GO', 'INTEGRATIONS', 'MESSAGING', 'AWS / AZURE'],
     aboutTitle: 'How I work.',
     principles: [
       { title: 'Consistency before speed', text: 'In financial and ERP systems, wrong data costs more than a late delivery. Transactions, idempotency, and locks in the right place come first.' },

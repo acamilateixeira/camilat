@@ -56,6 +56,10 @@ flowchart LR
 
 O conteúdo fica em [`src/content/`](src/content). Os componentes em [`src/components/`](src/components) cuidam da apresentação. Na primeira visita, o site mostra só a escolha entre português e inglês, para ninguém abrir o portfólio no idioma errado. Um link com `?lang=pt` ou `?lang=en` pula a escolha (os CVs e estes READMEs usam esse formato). [`useLanguage`](src/composables/useLanguage.ts) aplica o atributo `lang` e guarda a escolha quando o armazenamento local está disponível.
 
+## Currículos
+
+Os CVs em PDF ([PT](public/files/Camila_Teixeira_CV_PT.pdf) · [EN](public/files/Camila_Teixeira_CV_EN.pdf)) são gerados a partir de [`cv/pt.json`](cv/pt.json) e [`cv/en.json`](cv/en.json). Mudou o conteúdo? Edite o JSON e rode `python3 cv/build_cv.py` (requer `reportlab` e a fonte Carlito, pacote `fonts-crosextra-carlito`). O texto do site em `src/content/` segue o mesmo conteúdo: nada entra no portfólio sem estar no currículo.
+
 ## Rodar e verificar
 
 Use Node.js 22 e npm.
