@@ -56,6 +56,10 @@ flowchart LR
 
 Copy lives in [`src/content/`](src/content). Components in [`src/components/`](src/components) handle presentation. On a first visit the site shows only a choice between Portuguese and English, so nobody lands on the portfolio in the wrong language. A link with `?lang=pt` or `?lang=en` skips the choice (the CVs and these READMEs use that format). [`useLanguage`](src/composables/useLanguage.ts) sets the `lang` attribute and saves the choice when local storage is available.
 
+## Resumes
+
+The PDF resumes ([PT](public/files/Camila_Teixeira_CV_PT.pdf) · [EN](public/files/Camila_Teixeira_CV_EN.pdf)) are generated from [`cv/pt.json`](cv/pt.json) and [`cv/en.json`](cv/en.json). To change them, edit the JSON and run `python3 cv/build_cv.py` (requires `reportlab` and the Carlito font, package `fonts-crosextra-carlito`). The site copy in `src/content/` follows the same content: nothing goes into the portfolio unless it is in the resume.
+
 ## Run and verify
 
 Use Node.js 22 and npm.

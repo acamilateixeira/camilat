@@ -1,0 +1,153 @@
+{
+  "lang": "pt",
+  "file": "Camila_Teixeira_CV_PT.pdf",
+  "name": "Camila Teixeira",
+  "headline": "Desenvolvedora Back-end / Full Stack · PHP/Laravel · Node.js · React · Integrações",
+  "contact": [
+    "Belo Horizonte, MG (híbrido ou remoto) · +55 (31) 98965-8128 · camila.teixeira42@hotmail.com",
+    "linkedin.com/in/acamilateixeira · github.com/acamilateixeira · acamilateixeira.github.io/camilat"
+  ],
+  "labels": {
+    "summary": "Resumo",
+    "skills": "Competências técnicas",
+    "experience": "Experiência profissional",
+    "projects": "Projetos",
+    "education": "Formação",
+    "languages": "Idiomas"
+  },
+  "summary": "Desenvolvedora back-end e full stack com <b>5 anos em sistemas financeiros, ERP, e-commerce nacional e aplicações para indústria e mineração</b>. Atuo do requisito à produção: APIs REST em PHP/Laravel e Node.js, integrações entre ERP, Salesforce e e-commerce, interfaces em React, Vue e TypeScript, modernização de legado e sustentação. Nos projetos públicos, aplico <b>controle de concorrência, idempotência, transactional outbox com RabbitMQ, Row Level Security no PostgreSQL e Go com context.Context</b>, sempre com testes que reproduzem a falha antes da correção e decisões registradas em ADRs.",
+  "skills": [
+    [
+      "Back-end",
+      "PHP 8, Laravel (Eloquent, filas, Sanctum), Node.js (Fastify), Go (goroutines, context.Context, WebAssembly), Rust, C#/.NET, ASP.NET, Python, APIs REST, OpenAPI/Swagger, Insomnia e Postman"
+    ],
+    [
+      "Confiabilidade",
+      "Transações e SELECT … FOR UPDATE, locks distribuídos no Redis, idempotência (Idempotency-Key), transactional outbox e inbox, RabbitMQ (publisher confirms, DLQ), compensação de falhas parciais, timeouts, cancelamento e respostas parciais, isolamento multi-tenant"
+    ],
+    [
+      "Dados",
+      "MySQL, SQL Server, PostgreSQL (Row Level Security), Oracle e PL/SQL, Redis (cache, locks, filas), SQLite, modelagem e otimização de consultas"
+    ],
+    [
+      "Salesforce",
+      "Apex, Triggers, Lightning Web Components, Aura, Visualforce, Flows e Process Builder, SOQL e SOSL, Sales Cloud, MuleSoft"
+    ],
+    [
+      "Front-end e mobile",
+      "TypeScript, JavaScript, React, Vue 3, Angular, React Native (Expo), HTML, CSS, Tailwind, Material-UI, Chart.js, Vite, WordPress, Oracle APEX"
+    ],
+    [
+      "Testes e qualidade",
+      "PHPUnit, Pest (incl. testes de arquitetura), Jest, Vitest, node:test, go test -race, testes de concorrência com MySQL e de RLS com PostgreSQL, Larastan/PHPStan nível 8, Pint, ESLint"
+    ],
+    [
+      "DevOps e nuvem",
+      "Docker e Docker Compose, CI/CD (GitHub Actions, GitLab CI), Git, Linux, AWS, Azure, Supabase (Auth, Realtime, Edge Functions), k6, testes de capacidade com cgroups"
+    ],
+    [
+      "Práticas",
+      "SOLID, Clean Code, arquitetura em camadas e portas e adaptadores, máquinas de estado, ADRs, Ágil e Scrum, Figma, desenvolvimento assistido por IA (Claude) com revisão por testes e diff"
+    ]
+  ],
+  "experience": [
+    {
+      "company": "Grupo Mysa",
+      "role": "Desenvolvedora Full Stack",
+      "meta": "jun/2024 – atual · ERP · E-commerce nacional · Integrações",
+      "bullets": [
+        "Desenvolvo, mantenho e evoluo <b>sistemas corporativos de grande porte (ERP, e-commerce nacional e gestão de filiais)</b>, com foco em modernização de legado, integrações e sustentação em produção.",
+        "Implemento regras de negócio, <b>APIs REST e serviços de back-end em PHP/Laravel, JavaScript e TypeScript</b>, integrando sistemas e evoluindo funcionalidades existentes.",
+        "Desenvolvo e integro <b>soluções Salesforce com Apex, LWC, Triggers, Flows, SOQL e SOSL</b>, conectando processos comerciais, ERP e e-commerce, em ambiente <b>AWS</b>.",
+        "Analiso requisitos, defino soluções técnicas, investigo falhas, depuro e refatoro considerando desempenho, segurança, manutenibilidade e continuidade da operação.",
+        "Atuo no <b>ciclo completo</b> com equipes multidisciplinares: entendimento do negócio, implementação, versionamento com Git, validação, deploy e acompanhamento em produção."
+      ]
+    },
+    {
+      "company": "Easy Process EHS-S / Triadd",
+      "role": "Engenheira de Software",
+      "meta": "out/2024 – mai/2025 · Indústria · Mineração · Agronegócio",
+      "bullets": [
+        "Desenvolvi e evoluí sistemas corporativos de gestão operacional, auditoria, controle de processos e integridade das informações para clientes como <b>Albras, Raízen, Tereos, FS Bioenergia, Keune e Vale</b>.",
+        "Construí aplicações em <b>Oracle APEX, SQL e PL/SQL</b>: modelagem e consultas, procedures, triggers, validações e regras de negócio para processos operacionais complexos.",
+        "Criei formulários, relatórios gerenciais, extrações de dados e documentos operacionais, com <b>integrações por APIs REST</b> a outros sistemas corporativos.",
+        "Mantive e investiguei falhas em aplicações de <b>ambientes operacionais críticos</b>, preservando consistência dos dados, segurança e continuidade dos processos."
+      ]
+    },
+    {
+      "company": "ZR System",
+      "role": "Desenvolvedora PHP",
+      "meta": "jun/2024 – set/2024 · Legado · MVC · Automação",
+      "bullets": [
+        "Desenvolvi e evoluí um <b>sistema legado em PHP com arquitetura MVC</b> para automação de processos operacionais, integrando apresentação, regra de negócio e persistência.",
+        "Mantive as operações em <b>MySQL</b> (consultas, manipulação de dados e funcionalidades dos processos automatizados) e organizei o código preservando o que já estava em uso.",
+        "Versionei com Git e organizei as entregas com práticas ágeis."
+      ]
+    },
+    {
+      "company": "Sicoob Central Cecremge",
+      "role": "Desenvolvedora Full Stack",
+      "meta": "jun/2021 – jun/2024 · Sistemas financeiros · Cooperativas de crédito",
+      "bullets": [
+        "Desenvolvi, mantive e modernizei <b>sistemas corporativos e financeiros usados por cooperativas de crédito</b>, com soluções full stack, integrações e sustentação em produção.",
+        "Construí <b>serviços de back-end e APIs REST em PHP/Laravel</b>, com experiência em C#/.NET, Node.js e Python, e interfaces em <b>React, TypeScript e JavaScript</b>.",
+        "Trabalhei com <b>Microsoft Azure, SQL Server e MySQL</b>, e modernizei legados em PHP e JavaScript com refatoração, correção de bugs e hotfixes.",
+        "Apliquei <b>SOLID</b>, código modular e testes com <b>PHPUnit e Jest</b>; participei de <b>CI/CD no GitLab</b>, code review, Docker, Linux, deploy e investigação de incidentes.",
+        "Atuei em times ágeis (Scrum, Trello, Planner e GitLab Issue Boards) do planejamento técnico à entrega."
+      ]
+    },
+    {
+      "company": "Construtora Você",
+      "role": "Analista de Sistemas",
+      "meta": "mar/2018 – dez/2020 · Salesforce CRM · Processos comerciais",
+      "bullets": [
+        "Participei da <b>implantação e consolidação do Salesforce</b> como plataforma de processos comerciais, padronizando fluxos e organizando informações.",
+        "Analisei requisitos e problemas nos processos, apoiei a configuração de funcionalidades e validei as soluções com os usuários.",
+        "Dei suporte funcional, documentei processos e treinei colaboradores nos sistemas corporativos.",
+        "Analisei e validei <b>informações financeiras de processos de crédito imobiliário</b> em plataformas integradas à operação."
+      ]
+    }
+  ],
+  "experience_note": "Estágio na Caixa Econômica Federal (nov/2016 – nov/2017).",
+  "projects": [
+    {
+      "name": "TripFlow",
+      "url": "github.com/acamilateixeira/tripflow",
+      "text": "API de viagens corporativas para três problemas de produção: aprovações simultâneas disputando o mesmo orçamento, tentativas repetidas de reserva e falhas entre o banco e o broker.",
+      "stack": "PHP 8.3 · Laravel 12 · MySQL · Redis · RabbitMQ · Docker · Pest · Larastan",
+      "bullets": [
+        "<b>SELECT … FOR UPDATE</b> no centro de custo impede duas aprovações de gastar o mesmo saldo; um teste com duas conexões MySQL prova que a aprovação espera o lock.",
+        "<b>Idempotency-Key</b> reaproveita a resposta de reenvios; na reserva, um <b>lock no Redis</b> serializa emissão e cancelamento, e reservas já confirmadas são <b>compensadas</b> no fornecedor quando outra parte falha.",
+        "<b>Transactional outbox</b> publica no RabbitMQ depois do commit com publisher confirms; o consumidor deduplica reentregas pela inbox. Escopo por empresa e testes de isolamento entre clientes."
+      ]
+    },
+    {
+      "name": "GEMP",
+      "url": "github.com/acamilateixeira/GEMP",
+      "text": "Comparador de crédito fictício que consulta três provedores em paralelo e compara o custo total, mostrando o que ainda dá para entregar quando um provedor demora ou cai.",
+      "stack": "Go · net/http · WebAssembly · React · TypeScript · Vite · GitHub Actions",
+      "bullets": [
+        "Cada provedor roda em uma <b>goroutine com context.Context</b> e prazo próprio de 250 ms; resposta parcial quando um falha, 503 sem nenhuma oferta, e panic de um provedor vira falha isolada.",
+        "A demo pública roda <b>o mesmo código Go compilado para WebAssembly</b> no navegador, verificado no CI contra os mesmos cenários da API."
+      ]
+    },
+    {
+      "name": "Bora",
+      "url": "github.com/acamilateixeira/Bora",
+      "text": "App solicitado pela Prefeitura de Conceição do Mato Dentro (MG) para uma operação temporária: corridas de motoristas contratados, solicitantes, destinos, contatos e elegibilidade por órgão.",
+      "stack": "React Native · Expo · TypeScript · Supabase Auth · PostgreSQL · Realtime · Edge Functions",
+      "bullets": [
+        "Toda regra de acesso fica no banco: <b>Row Level Security</b> por órgão e funções security definer, cobertas por uma suíte SQL que roda no CI contra Postgres 16.",
+        "Corrigi a política de atribuição de corridas com testes que reproduziam o problema e um <b>índice único parcial</b> que impede dois aceites simultâneos da mesma corrida."
+      ]
+    }
+  ],
+  "projects_note": "Outros projetos: Emppo Finance (Node.js, Fastify, SQLite, valores em centavos), Sorteador (Angular, sorteio auditável com compromisso SHA-256), MeterTrail (Rust, contagem de uso sem duplicar após falhas) e Livit Live Controller (Python e Node.js para TikTok LIVE). Detalhes em acamilateixeira.github.io/camilat.",
+  "education": [
+    "Tecnólogo em Análise e Desenvolvimento de Sistemas — Unibta (2021–2023)",
+    "Tecnólogo em Processos Gerenciais — Estácio (2024–2025)",
+    "Ciência da Computação — graduação em andamento",
+    "Complementar: Engenharia de Software Moderna (UFMG) · Trilha Salesforce Admin / App Builder"
+  ],
+  "languages": "Português nativo · Inglês avançado · Francês básico"
+}
