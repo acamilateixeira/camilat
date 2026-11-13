@@ -54,7 +54,7 @@ const symbols: IconName[] = ['braces', 'arrow-up-right', 'code']
         <article v-for="(project, i) in others" :id="project.id" :key="project.id" class="project-card">
           <div :class="['project-art', `art-${i}`]">
             <span class="project-number">/ 0{{ i + featured.length + 1 }}</span>
-            <span class="project-symbol"><AppIcon :name="symbols[i % 3]" /></span>
+            <span class="project-symbol"><AppIcon :name="symbols[i % symbols.length] ?? 'code'" /></span>
             <span class="project-type">{{ project.type }}</span>
           </div>
           <div class="project-body">
