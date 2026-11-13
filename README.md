@@ -54,7 +54,7 @@ flowchart LR
 | **Vitest e Vue Test Utils** | Testes de navegação, seleção de idioma, links e paridade de conteúdo. |
 | **ESLint e GitHub Actions** | Verificações em PRs, orçamento de JavaScript e publicação no GitHub Pages. |
 
-O conteúdo fica em [`src/content/`](src/content). Os componentes em [`src/components/`](src/components) cuidam da apresentação. Na primeira visita, o site mostra só a escolha entre português e inglês, para ninguém abrir o portfólio no idioma errado. Um link com `?lang=pt` ou `?lang=en` pula a escolha (os CVs e estes READMEs usam esse formato). [`useLanguage`](src/composables/useLanguage.ts) aplica o atributo `lang` e guarda a escolha quando o armazenamento local está disponível.
+O conteúdo fica em [`src/content/`](src/content). Os componentes em [`src/components/`](src/components) cuidam da apresentação. A cada visita nova, em qualquer aparelho, o site mostra primeiro só a escolha entre português e inglês, com a última escolha já selecionada; dentro da mesma visita não pergunta de novo. Um link com `?lang=pt` ou `?lang=en` pula a escolha (os CVs e estes READMEs usam esse formato). [`useLanguage`](src/composables/useLanguage.ts) aplica o atributo `lang` e guarda a escolha quando o armazenamento local está disponível. Os ícones são SVG ([`AppIcon`](src/components/AppIcon.vue)), e não caracteres como ↗, que no celular viram emoji.
 
 ## Currículos
 

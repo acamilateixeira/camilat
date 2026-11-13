@@ -67,3 +67,15 @@
 .language-gate-options small{font-size:13px;color:var(--muted)}
 @media(max-width:480px){.language-gate-options{grid-template-columns:1fr}.language-gate-divider{display:block;height:0;overflow:hidden}}
 @media(prefers-reduced-motion:reduce){.language-gate-options button:hover{transform:none}}
+
+/* ---------- ícones SVG (iguais em qualquer aparelho) ---------- */
+.icon{width:1em;height:1em;flex:none;display:inline-block;vertical-align:-.125em}
+.button .icon{width:15px;height:15px}
+.location .icon{width:13px;height:13px;margin-right:4px;color:var(--red);vertical-align:-2px}
+.project-body>a .icon{width:16px;height:16px;color:var(--red)}
+.text-link .icon{width:14px;height:14px;margin-left:8px;color:var(--red)}
+.contact-actions .icon{width:13px;height:13px;margin-left:4px}
+.site-footer>a:last-child .icon{width:24px;height:24px}
+.project-symbol{display:flex;align-items:center;justify-content:center}
+.project-symbol .icon{width:64px;height:64px;stroke-width:1.2}
+.art-featured .project-symbol .icon{width:96px;height:96px}

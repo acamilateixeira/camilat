@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import AppIcon from './AppIcon.vue'
+import type { IconName } from '../content/types'
 import { computed } from 'vue'
 import { useLanguage } from '../composables/useLanguage'
 import { contact } from '../content/copy'
@@ -11,7 +13,7 @@ const assetBase = import.meta.env.BASE_URL
 const repoUrl = (repo: string) => `${contact.github}/${repo}`
 // A demo abre no idioma que a pessoa escolheu no portfólio.
 const demoUrl = (demo: string) => `${demo}${demo.includes('?') ? '&' : '?'}lang=${language.value}`
-const symbols = ['{ }', '↗', '</>']
+const symbols: IconName[] = ['braces', 'arrow-up-right', 'code']
 </script>
 
 <template>
@@ -28,7 +30,7 @@ const symbols = ['{ }', '↗', '</>']
             <img :src="assetBase + project.diagram.file" :alt="project.diagram.alt[language]" width="360" height="260" loading="lazy">
             <figcaption>{{ t.diagram }}</figcaption>
           </figure>
-          <span v-else class="project-symbol" aria-hidden="true">{{ project.symbol ?? '⇄' }}</span>
+          <span v-else class="project-symbol"><AppIcon :name="project.symbol ?? 'swap'" /></span>
           <span class="project-type">{{ project.type }}</span>
         </div>
         <div class="project-body">
@@ -39,10 +41,10 @@ const symbols = ['{ }', '↗', '</>']
           </ul>
           <p class="project-stack">{{ project.stack }}</p>
           <a v-if="project.demo" :href="demoUrl(project.demo)" target="_blank" rel="noopener noreferrer" data-test="project-demo">
-            {{ t.demo }}<span aria-hidden="true">↗</span>
+            {{ t.demo }}<AppIcon name="arrow-up-right" />
           </a>
           <a v-if="project.repo" :class="{ 'link-after': project.demo }" :href="repoUrl(project.repo)" target="_blank" rel="noopener noreferrer" data-test="project-repo">
-            {{ t.source }}<span aria-hidden="true">↗</span>
+            {{ t.source }}<AppIcon name="arrow-up-right" />
           </a>
           <p v-else class="project-availability">{{ t.privateProject }}</p>
         </div>
@@ -52,7 +54,7 @@ const symbols = ['{ }', '↗', '</>']
         <article v-for="(project, i) in others" :id="project.id" :key="project.id" class="project-card">
           <div :class="['project-art', `art-${i}`]">
             <span class="project-number">/ 0{{ i + featured.length + 1 }}</span>
-            <span class="project-symbol" aria-hidden="true">{{ symbols[i % 3] }}</span>
+            <span class="project-symbol"><AppIcon :name="symbols[i % 3]" /></span>
             <span class="project-type">{{ project.type }}</span>
           </div>
           <div class="project-body">
@@ -60,17 +62,17 @@ const symbols = ['{ }', '↗', '</>']
             <p>{{ project.description[language] }}</p>
             <p class="project-stack">{{ project.stack }}</p>
             <a v-if="project.demo" :href="demoUrl(project.demo)" target="_blank" rel="noopener noreferrer" data-test="project-demo">
-              {{ t.demo }}<span aria-hidden="true">↗</span>
+              {{ t.demo }}<AppIcon name="arrow-up-right" />
             </a>
             <a v-if="project.repo" :class="{ 'link-after': project.demo }" :href="repoUrl(project.repo)" target="_blank" rel="noopener noreferrer">
-              {{ t.source }}<span aria-hidden="true">↗</span>
+              {{ t.source }}<AppIcon name="arrow-up-right" />
             </a>
           </div>
         </article>
       </div>
 
       <a class="text-link" :href="`${contact.github}?tab=repositories`" target="_blank" rel="noopener noreferrer">
-        {{ t.all }} <span aria-hidden="true">↗</span>
+        {{ t.all }} <AppIcon name="arrow-up-right" />
       </a>
     </div>
   </section>

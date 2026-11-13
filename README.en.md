@@ -54,7 +54,7 @@ flowchart LR
 | **Vitest and Vue Test Utils** | Tests for navigation, language selection, links, and content parity. |
 | **ESLint and GitHub Actions** | Pull request checks, a JavaScript size budget, and GitHub Pages deployment. |
 
-Copy lives in [`src/content/`](src/content). Components in [`src/components/`](src/components) handle presentation. On a first visit the site shows only a choice between Portuguese and English, so nobody lands on the portfolio in the wrong language. A link with `?lang=pt` or `?lang=en` skips the choice (the CVs and these READMEs use that format). [`useLanguage`](src/composables/useLanguage.ts) sets the `lang` attribute and saves the choice when local storage is available.
+Copy lives in [`src/content/`](src/content). Components in [`src/components/`](src/components) handle presentation. On every new visit, on any device, the site first shows only a choice between Portuguese and English, with the last choice preselected; within the same visit it does not ask again. A link with `?lang=pt` or `?lang=en` skips the choice (the CVs and these READMEs use that format). [`useLanguage`](src/composables/useLanguage.ts) sets the `lang` attribute and saves the choice when local storage is available. Icons are SVG ([`AppIcon`](src/components/AppIcon.vue)), not characters like ↗, which turn into emoji on phones.
 
 ## Resumes
 

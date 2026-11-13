@@ -7,6 +7,7 @@ async function freshApp(search = '', stored: string | null = null) {
   vi.resetModules()
   window.history.replaceState(null, '', `/${search}`)
   window.localStorage.clear()
+  window.sessionStorage.clear()
   if (stored) window.localStorage.setItem('portfolio-language', stored)
   const { default: App } = await import('../App.vue')
   return mount(App, { attachTo: document.body })
@@ -16,6 +17,7 @@ afterEach(() => {
   document.body.innerHTML = ''
   window.history.replaceState(null, '', '/')
   window.localStorage.clear()
+  window.sessionStorage.clear()
 })
 
 describe('escolha de idioma', () => {
@@ -47,8 +49,18 @@ describe('escolha de idioma', () => {
     expect(wrapper.get('h1').text()).toContain('Integrations that work.')
   })
 
-  it('pula a escolha na volta de quem já escolheu', async () => {
-    const wrapper = await freshApp('', 'pt')
+  it('numa visita nova pergunta de novo, com a escolha anterior já em foco', async () => {
+    const wrapper = await freshApp('', 'en')
+
+    expect(wrapper.find('.language-gate').exists()).toBe(true)
+    expect(document.activeElement?.getAttribute('data-lang')).toBe('en')
+  })
+
+  it('dentro da mesma visita não pergunta de novo', async () => {
+    window.sessionStorage.setItem('portfolio-language-session', 'pt')
+    vi.resetModules()
+    const { default: App } = await import('../App.vue')
+    const wrapper = mount(App, { attachTo: document.body })
 
     expect(wrapper.find('.language-gate').exists()).toBe(false)
     expect(wrapper.get('h1').text()).toContain('Integrações que funcionam.')

@@ -3,6 +3,9 @@ import { copy } from '../content/copy'
 import type { Language } from '../content/types'
 
 const STORAGE_KEY = 'portfolio-language'
+// A escolha vale para a visita (aba aberta). Numa visita nova, em qualquer aparelho, a tela de idioma volta;
+// a escolha anterior (localStorage) só decide qual botão já vem selecionado.
+const SESSION_KEY = 'portfolio-language-session'
 
 function isLanguage(value: unknown): value is Language {
   return value === 'pt' || value === 'en'
@@ -11,6 +14,15 @@ function isLanguage(value: unknown): value is Language {
 function readStored(): Language | null {
   try {
     const value = window.localStorage.getItem(STORAGE_KEY)
+    return isLanguage(value) ? value : null
+  } catch {
+    return null // modo privado ou storage bloqueado
+  }
+}
+
+function readSession(): Language | null {
+  try {
+    const value = window.sessionStorage.getItem(SESSION_KEY)
     return isLanguage(value) ? value : null
   } catch {
     return null // modo privado ou storage bloqueado
@@ -27,13 +39,17 @@ function readUrl(): Language | null {
   }
 }
 
-/** Só sugere qual botão recebe o foco na tela de escolha. */
+/** Sugere qual botão recebe o foco na tela de escolha: a última escolha, senão o idioma do navegador. */
 export function browserLanguage(): Language {
+  if (typeof window !== 'undefined') {
+    const stored = readStored()
+    if (stored) return stored
+  }
   if (typeof navigator === 'undefined') return 'pt'
   return navigator.language?.toLowerCase().startsWith('pt') ? 'pt' : 'en'
 }
 
-const initial = typeof window === 'undefined' ? null : (readUrl() ?? readStored())
+const initial = typeof window === 'undefined' ? null : (readUrl() ?? readSession())
 
 // Estado compartilhado entre componentes (singleton do módulo).
 const language = ref<Language>(initial ?? browserLanguage())
@@ -46,6 +62,7 @@ watchEffect(() => {
   if (!chosen.value) return
   try {
     window.localStorage.setItem(STORAGE_KEY, language.value)
+    window.sessionStorage.setItem(SESSION_KEY, language.value)
   } catch {
     // preferência é opcional
   }
