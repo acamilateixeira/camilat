@@ -8,7 +8,7 @@ export const projects: Project[] = [
     demo: 'https://acamilateixeira.github.io/GEMP/',
     type: 'Full Stack · Integrações',
     featured: true,
-    symbol: '⫘',
+    symbol: 'nodes',
     stack: 'Go · net/http · WebAssembly · React · TypeScript · Vite · GitHub Actions',
     description: {
       pt: 'Comparador de crédito fictício que consulta três provedores em paralelo. Uma taxa mensal menor pode vir com uma tarifa inicial maior, então o GEMP compara o custo total e mostra o que ainda dá para entregar quando um provedor demora ou cai.',
@@ -36,7 +36,7 @@ export const projects: Project[] = [
     demo: 'https://acamilateixeira.github.io/Tripflow/',
     type: 'Back-end',
     featured: true,
-    symbol: '⇄',
+    symbol: 'swap',
     stack: 'PHP 8.3 · Laravel 12 · MySQL · Redis · RabbitMQ · Docker · Pest · Larastan',
     description: {
       pt: 'Construí uma API de viagens corporativas para explorar três problemas de produção: aprovações simultâneas disputando o mesmo orçamento, tentativas repetidas de reserva e falhas entre o banco e o broker. A demo vai da solicitação à reserva com um fornecedor simulado.',
@@ -64,7 +64,7 @@ export const projects: Project[] = [
     demo: 'https://acamilateixeira.github.io/Bora/',
     type: 'Full Stack · Mobile',
     featured: true,
-    symbol: '⌖',
+    symbol: 'target',
     stack: 'React Native · Expo · TypeScript · Supabase Auth · PostgreSQL · Realtime · Edge Functions',
     description: {
       pt: 'A Prefeitura de Conceição do Mato Dentro (MG) solicitou o Bora para uma operação temporária. A equipe precisava saber quantas corridas cada motorista contratado tinha feito, para quem, para onde, como contatá-lo e se ainda podia atender pelo órgão.',

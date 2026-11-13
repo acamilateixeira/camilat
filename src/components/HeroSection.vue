@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import AppIcon from './AppIcon.vue'
 import { computed } from 'vue'
 import { useLanguage } from '../composables/useLanguage'
 import { resumes } from '../content/copy'
@@ -16,10 +17,10 @@ const resumeName = computed(() => `Camila_Teixeira_CV_${language.value.toUpperCa
       <h1>{{ t.titleTop }}<br /><em>{{ t.titleBottom }}</em></h1>
       <p class="hero-intro">{{ t.intro }}</p>
       <div class="hero-actions">
-        <a class="button primary" href="#projects">{{ t.view }}<span aria-hidden="true">↗</span></a>
-        <a class="button quiet" :href="resumeHref" :download="resumeName">{{ t.cv }}<span aria-hidden="true">↓</span></a>
+        <a class="button primary" href="#projects">{{ t.view }}<AppIcon name="arrow-up-right" /></a>
+        <a class="button quiet" :href="resumeHref" :download="resumeName">{{ t.cv }}<AppIcon name="arrow-down" /></a>
       </div>
-      <p class="location"><span aria-hidden="true">◎</span> {{ t.location }}</p>
+      <p class="location"><AppIcon name="pin" /> {{ t.location }}</p>
     </div>
     <div class="portrait-card">
       <span class="portrait-cross" aria-hidden="true">+</span>
