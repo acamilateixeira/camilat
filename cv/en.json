@@ -15,7 +15,7 @@
   "education": "Education",
   "languages": "Languages"
  },
- "summary": "Back-end and full stack developer for <b>5 years</b>, in financial systems (credit unions), ERP, nationwide e-commerce, and applications for industry and mining. Before that, almost 3 years as a systems analyst rolling out Salesforce. Today I maintain the <b>integrations between an ERP, Salesforce, and a nationwide e-commerce platform</b> and modernize PHP/Laravel services in production. I combine <b>PHP/Laravel</b> back ends, <b>Salesforce development (Apex, LWC, Flows)</b>, and <b>React, Vue, and TypeScript</b> front ends. In my public projects I apply concurrency control, idempotency, immutable ledgers, and database-level access rules, always with tests that reproduce the failure.",
+ "summary": "Back-end and full stack developer for <b>5 years</b>, in financial systems (credit unions), ERP, nationwide e-commerce, and applications for industry and mining. Before that, almost 3 years as a systems analyst rolling out Salesforce. Today I maintain the <b>integrations between an ERP, Salesforce, and a nationwide e-commerce platform</b> and modernize PHP/Laravel services in production. I combine <b>PHP/Laravel</b> back ends, <b>Salesforce development (Apex, LWC, Flows)</b>, and <b>React, Vue, and TypeScript</b> front ends. In my public projects I apply concurrency control, idempotency, immutable ledgers, and database-level access rules, always with tests that reproduce the failure. I build with <b>AI coding agents (Claude Code)</b>, with tests and diff review validating every change.",
  "skills": [
   [
    "Back end",
@@ -35,7 +35,11 @@
   ],
   [
    "Engineering",
-   "PHPUnit, Pest, Jest, Vitest, Larastan, GitLab CI and GitHub Actions, Docker, Linux, Git, AWS, Azure, Scrum, Figma, AI-assisted development checked by tests"
+   "PHPUnit, Pest, Jest, Vitest, Larastan, GitLab CI and GitHub Actions, Docker, Linux, Git, AWS, Azure, Scrum, Figma"
+  ],
+  [
+   "AI in development",
+   "Claude Code and coding agents, agent guides in repositories (CLAUDE.md), AI pull request review in CI (Anthropic API), changes validated by tests, types, and diff review"
   ],
   [
    "Personal projects",
