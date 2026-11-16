@@ -15,8 +15,8 @@ export const skills: SkillGroup[] = [
   {
     title: { pt: 'Back-end', en: 'Back end' },
     items: {
-      pt: ['PHP 8 · Laravel (Eloquent, filas, Sanctum)', 'Node.js (Fastify)', 'Go (goroutines, context.Context, WebAssembly)', 'Rust · C# · .NET · Python', 'APIs REST · OpenAPI/Swagger', 'Insomnia · Postman'],
-      en: ['PHP 8 · Laravel (Eloquent, queues, Sanctum)', 'Node.js (Fastify)', 'Go (goroutines, context.Context, WebAssembly)', 'Rust · C# · .NET · Python', 'REST APIs · OpenAPI/Swagger', 'Insomnia · Postman'],
+      pt: ['PHP 8 · Laravel (Eloquent, filas, Sanctum)', 'APIs REST · OpenAPI/Swagger', 'Node.js', 'C# · .NET · Python (pontual)', 'Insomnia · Postman'],
+      en: ['PHP 8 · Laravel (Eloquent, queues, Sanctum)', 'REST APIs · OpenAPI/Swagger', 'Node.js', 'C# · .NET · Python (occasional)', 'Insomnia · Postman'],
     },
   },
   {
@@ -43,22 +43,22 @@ export const skills: SkillGroup[] = [
   {
     title: { pt: 'Front-end e mobile', en: 'Front end & mobile' },
     items: {
-      pt: ['TypeScript · JavaScript', 'React · Vue 3 · Angular', 'React Native (Expo)', 'HTML · CSS · Tailwind', 'Material-UI · Chart.js', 'Vite', 'WordPress'],
-      en: ['TypeScript · JavaScript', 'React · Vue 3 · Angular', 'React Native (Expo)', 'HTML · CSS · Tailwind', 'Material-UI · Chart.js', 'Vite', 'WordPress'],
+      pt: ['TypeScript · JavaScript', 'React · Vue 3', 'HTML · CSS · Tailwind', 'Material-UI · Chart.js', 'Vite', 'WordPress'],
+      en: ['TypeScript · JavaScript', 'React · Vue 3', 'HTML · CSS · Tailwind', 'Material-UI · Chart.js', 'Vite', 'WordPress'],
     },
   },
   {
     title: { pt: 'Testes e qualidade', en: 'Testing & quality' },
     items: {
-      pt: ['PHPUnit · Pest (incl. arquitetura)', 'Jest · Vitest · node:test', 'go test -race', 'Testes de concorrência (MySQL) e de RLS (PostgreSQL)', 'Larastan/PHPStan nível 8 · Pint · ESLint'],
-      en: ['PHPUnit · Pest (incl. architecture)', 'Jest · Vitest · node:test', 'go test -race', 'Concurrency tests (MySQL) & RLS tests (PostgreSQL)', 'Larastan/PHPStan level 8 · Pint · ESLint'],
+      pt: ['PHPUnit · Pest (incl. arquitetura)', 'Jest · Vitest · node:test', 'Testes de concorrência (MySQL) e de RLS (PostgreSQL)', 'Larastan/PHPStan nível 8 · Pint · ESLint'],
+      en: ['PHPUnit · Pest (incl. architecture)', 'Jest · Vitest · node:test', 'Concurrency tests (MySQL) & RLS tests (PostgreSQL)', 'Larastan/PHPStan level 8 · Pint · ESLint'],
     },
   },
   {
     title: { pt: 'DevOps e nuvem', en: 'DevOps & cloud' },
     items: {
-      pt: ['Docker · Docker Compose', 'CI/CD (GitHub Actions, GitLab CI)', 'Git · Linux', 'AWS · Azure', 'Supabase (Auth, Realtime, Edge Functions)', 'k6 · testes de capacidade com cgroups'],
-      en: ['Docker · Docker Compose', 'CI/CD (GitHub Actions, GitLab CI)', 'Git · Linux', 'AWS · Azure', 'Supabase (Auth, Realtime, Edge Functions)', 'k6 · capacity testing with cgroups'],
+      pt: ['Docker · Docker Compose', 'CI/CD (GitHub Actions, GitLab CI)', 'Git · Linux', 'AWS · Azure'],
+      en: ['Docker · Docker Compose', 'CI/CD (GitHub Actions, GitLab CI)', 'Git · Linux', 'AWS · Azure'],
     },
   },
   {
@@ -66,6 +66,13 @@ export const skills: SkillGroup[] = [
     items: {
       pt: ['SOLID · Clean Code', 'Camadas · portas e adaptadores', 'Máquinas de estado', 'ADRs', 'Ágil · Scrum · Figma', 'IA (Claude) com revisão por testes e diff'],
       en: ['SOLID · Clean Code', 'Layers · ports & adapters', 'State machines', 'ADRs', 'Agile · Scrum · Figma', 'AI (Claude) validated by tests & diff review'],
+    },
+  },
+  {
+    title: { pt: 'Em projetos pessoais (código público)', en: 'Personal projects (public code)' },
+    items: {
+      pt: ['Go (goroutines, context.Context, WebAssembly)', 'Rust (Axum, Tokio)', 'React Native (Expo) · Angular', 'Supabase (Auth, Realtime, Edge Functions) · PGlite', 'RabbitMQ · outbox transacional', 'Node.js (Fastify) · k6'],
+      en: ['Go (goroutines, context.Context, WebAssembly)', 'Rust (Axum, Tokio)', 'React Native (Expo) · Angular', 'Supabase (Auth, Realtime, Edge Functions) · PGlite', 'RabbitMQ · transactional outbox', 'Node.js (Fastify) · k6'],
     },
   },
 ]
@@ -79,11 +86,11 @@ export const copy = {
     eyebrow: 'Camila Teixeira / Software Engineer · Back-end e Full Stack',
     titleTop: 'Integrações que funcionam.',
     titleBottom: 'Legado que evolui.',
-    intro: 'Desenvolvedora back-end e full stack com 5 anos em sistemas financeiros, ERP, e-commerce nacional e aplicações para indústria e mineração. PHP/Laravel e Node.js no back-end, React, Vue e TypeScript no front-end, e integrações entre ERP, Salesforce e e-commerce. Trabalho do requisito à produção, incluindo modernização de legado e sustentação. Nos projetos públicos, aplico controle de concorrência, idempotência, transactional outbox com RabbitMQ, Row Level Security no PostgreSQL e Go com context.Context, com testes que reproduzem a falha antes da correção.',
+    intro: 'Desenvolvedora back-end e full stack há 5 anos, em sistemas financeiros, ERP e e-commerce, depois de quase 3 anos como analista de sistemas na implantação do Salesforce. Hoje sustento as integrações entre ERP, Salesforce e uma plataforma nacional de e-commerce e modernizo serviços PHP/Laravel em produção. Uso PHP/Laravel no back-end, Apex, LWC e Flows no Salesforce e React, Vue e TypeScript no front-end.',
     location: 'Belo Horizonte, Brasil · híbrido ou remoto',
     cv: 'Baixar currículo',
     view: 'Ver projetos',
-    ribbon: ['PHP / LARAVEL', 'NODE.JS / REACT', 'GO', 'INTEGRAÇÕES', 'MENSAGERIA', 'AWS / AZURE'],
+    ribbon: ['PHP / LARAVEL', 'SALESFORCE', 'REACT / TYPESCRIPT', 'INTEGRAÇÕES', 'APIs REST', 'AWS / AZURE'],
     aboutTitle: 'Como eu trabalho.',
     principles: [
       { title: 'Consistência antes de velocidade', text: 'Em sistema financeiro e de ERP, um dado errado custa mais que uma entrega atrasada. Transação, idempotência e lock no lugar certo vêm primeiro.' },
@@ -98,7 +105,7 @@ export const copy = {
     earlier: 'Antes: estágio na Caixa Econômica Federal (2016–2017).',
     labelProjects: '02 / Projetos',
     projects: 'Projetos, da necessidade à arquitetura.',
-    projectNote: 'Um comparador de crédito em Go, uma API de viagens, um app para a operação de corridas de uma prefeitura, um controlador de lives, um sorteador em Angular e um medidor de uso em Rust. Cada caso mostra o problema e as decisões que deram forma à solução.',
+    projectNote: 'Um comparador de crédito em Go, uma API de viagens, um app para a operação de corridas de uma prefeitura, um controlador de lives, uma carteira digital em Laravel, um sorteador em Angular e um medidor de uso em Rust. Cada caso mostra o problema e as decisões que deram forma à solução.',
     featured: 'Destaque',
     source: 'Ver código e documentação',
     demo: 'Abrir demo',
@@ -109,10 +116,10 @@ export const copy = {
     skills: 'Ferramentas a serviço do problema.',
     education: 'Formação',
     degrees: ['Análise e Desenvolvimento de Sistemas — Unibta (2021–2023)', 'Processos Gerenciais — Estácio (2024–2025)', 'Ciência da Computação — em andamento'],
-    training: 'Engenharia de Software Moderna — UFMG · Trilha Salesforce Admin / App Builder · Inglês avançado',
+    training: 'Engenharia de Software Moderna — UFMG · Trilha Salesforce Admin / App Builder · Inglês intermediário (B1/B2)',
     labelContact: '04 / Contato',
     contact: 'Vamos conversar?',
-    contactText: 'Aberta a oportunidades como desenvolvedora back-end ou full stack (PHP/Laravel, Node.js, React).',
+    contactText: 'Aberta a oportunidades como desenvolvedora back-end ou full stack (PHP/Laravel, Salesforce, React/TypeScript).',
     email: 'Enviar e-mail',
     footer: 'Contexto. Código. Consistência.',
     top: 'Voltar ao início',
@@ -125,11 +132,11 @@ export const copy = {
     eyebrow: 'Camila Teixeira / Software Engineer · Back end & Full Stack',
     titleTop: 'Integrations that work.',
     titleBottom: 'Legacy that evolves.',
-    intro: 'Back-end and full stack developer with 5 years in financial systems, ERP, nationwide e-commerce, and applications for industry and mining. PHP/Laravel and Node.js on the back end, React, Vue, and TypeScript on the front end, and integrations between ERP, Salesforce, and e-commerce. I work from requirements to production, including legacy modernization and production support. In my public projects I apply concurrency control, idempotency, a transactional outbox with RabbitMQ, PostgreSQL Row Level Security, and Go with context.Context, with tests that reproduce a failure before the fix.',
+    intro: 'Back-end and full stack developer for 5 years, in financial systems, ERP, and e-commerce, after almost 3 years as a systems analyst rolling out Salesforce. Today I maintain the integrations between an ERP, Salesforce, and a nationwide e-commerce platform and modernize PHP/Laravel services in production. I work with PHP/Laravel on the back end, Apex, LWC, and Flows on Salesforce, and React, Vue, and TypeScript on the front end.',
     location: 'Belo Horizonte, Brazil · hybrid, remote, or open to relocation',
     cv: 'Download résumé',
     view: 'See projects',
-    ribbon: ['PHP / LARAVEL', 'NODE.JS / REACT', 'GO', 'INTEGRATIONS', 'MESSAGING', 'AWS / AZURE'],
+    ribbon: ['PHP / LARAVEL', 'SALESFORCE', 'REACT / TYPESCRIPT', 'INTEGRATIONS', 'REST APIs', 'AWS / AZURE'],
     aboutTitle: 'How I work.',
     principles: [
       { title: 'Consistency before speed', text: 'In financial and ERP systems, wrong data costs more than a late delivery. Transactions, idempotency, and locks in the right place come first.' },
@@ -144,7 +151,7 @@ export const copy = {
     earlier: 'Earlier: internship at Caixa Econômica Federal (2016–2017).',
     labelProjects: '02 / Projects',
     projects: 'Projects, from problem to architecture.',
-    projectNote: 'A credit comparison tool in Go, a travel API, a municipal ride app, a livestream controller, an Angular draw tool, and a usage meter in Rust. Each case covers the problem and the decisions that shaped the solution.',
+    projectNote: 'A credit comparison tool in Go, a travel API, a municipal ride app, a livestream controller, a Laravel digital wallet, an Angular draw tool, and a usage meter in Rust. Each case covers the problem and the decisions that shaped the solution.',
     featured: 'Featured',
     source: 'View code and documentation',
     demo: 'Open demo',
@@ -155,10 +162,10 @@ export const copy = {
     skills: 'Tools in service of the problem.',
     education: 'Education',
     degrees: ['Systems Analysis and Development — Unibta (2021–2023)', 'Business Process Management — Estácio (2024–2025)', 'Computer Science — in progress'],
-    training: 'Modern Software Engineering — UFMG · Salesforce Admin / App Builder track · Advanced English',
+    training: 'Modern Software Engineering — UFMG · Salesforce Admin / App Builder track · English: intermediate (B1/B2)',
     labelContact: '04 / Contact',
     contact: 'Let’s talk?',
-    contactText: 'Open to back-end or full stack roles (PHP/Laravel, Node.js, React), remote or with relocation.',
+    contactText: 'Open to back-end or full stack roles (PHP/Laravel, Salesforce, React/TypeScript), remote or with relocation. Brazilian citizen: relocation requires work visa sponsorship.',
     email: 'Send an email',
     footer: 'Context. Code. Consistency.',
     top: 'Back to top',
