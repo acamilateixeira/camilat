@@ -118,6 +118,17 @@ export const projects: Project[] = [
     },
   },
   {
+    id: 'nexora',
+    name: 'Nexora Core',
+    repo: 'nexora-ct',
+    type: 'Back-end · Fintech',
+    stack: 'PHP 8.4 · Laravel 13 · MySQL 8.4 · Docker · PHPUnit · Larastan',
+    description: {
+      pt: 'Carteira digital com depósito, transferência, devolução, contestação com bloqueio do valor e extrato. O dinheiro fica em centavos e cada movimento gera um lançamento imutável num livro-razão; estorno é sempre uma operação nova. Triggers e permissões do MySQL impedem a própria aplicação de alterar saldo ou lançamento, carteiras são travadas em ordem para evitar deadlock e a idempotency key evita operação duplicada. A paginação por cursor levou o extrato com 1 milhão de lançamentos de até 2,2 s para menos de 100 ms. Testes no MySQL cobrem concorrência com processos separados e tentativas de adulteração direta no banco.',
+      en: 'A digital wallet with deposits, transfers, refunds, disputes that hold the amount, and statements. Money is stored in cents and every movement writes an immutable ledger entry; a reversal is always a new operation. MySQL triggers and grants stop the application itself from changing balances or entries, wallets are locked in a fixed order to avoid deadlocks, and an idempotency key prevents duplicate operations. Cursor pagination took a 1-million-entry statement from up to 2.2 s down to under 100 ms. Tests on MySQL cover concurrency with separate processes and direct tampering attempts in the database.',
+    },
+  },
+  {
     id: 'sorteador',
     name: 'Sorteador',
     repo: 'sorteador-web',
