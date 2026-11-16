@@ -20,6 +20,13 @@ export const skills: SkillGroup[] = [
     },
   },
   {
+    title: { pt: 'IA no desenvolvimento', en: 'AI in development' },
+    items: {
+      pt: ['Claude Code · agentes de código', 'Guias para agentes no repositório (CLAUDE.md)', 'Revisão de PR por IA no CI (API da Anthropic)', 'Mudança validada por testes, tipos e revisão de diff'],
+      en: ['Claude Code · coding agents', 'Agent guides in the repository (CLAUDE.md)', 'AI pull request review in CI (Anthropic API)', 'Changes validated by tests, types & diff review'],
+    },
+  },
+  {
     title: { pt: 'Confiabilidade', en: 'Reliability' },
     items: {
       pt: ['Transações · SELECT … FOR UPDATE', 'Locks distribuídos no Redis', 'Idempotência (Idempotency-Key)', 'Transactional outbox e inbox · RabbitMQ', 'Compensação de falhas parciais', 'Timeouts, cancelamento e respostas parciais', 'Isolamento multi-tenant'],
@@ -64,8 +71,8 @@ export const skills: SkillGroup[] = [
   {
     title: { pt: 'Práticas', en: 'Practices' },
     items: {
-      pt: ['SOLID · Clean Code', 'Camadas · portas e adaptadores', 'Máquinas de estado', 'ADRs', 'Ágil · Scrum · Figma', 'IA (Claude) com revisão por testes e diff'],
-      en: ['SOLID · Clean Code', 'Layers · ports & adapters', 'State machines', 'ADRs', 'Agile · Scrum · Figma', 'AI (Claude) validated by tests & diff review'],
+      pt: ['SOLID · Clean Code', 'Camadas · portas e adaptadores', 'Máquinas de estado', 'ADRs', 'Ágil · Scrum · Figma'],
+      en: ['SOLID · Clean Code', 'Layers · ports & adapters', 'State machines', 'ADRs', 'Agile · Scrum · Figma'],
     },
   },
   {
@@ -86,11 +93,11 @@ export const copy = {
     eyebrow: 'Camila Teixeira / Software Engineer · Back-end e Full Stack',
     titleTop: 'Integrações que funcionam.',
     titleBottom: 'Legado que evolui.',
-    intro: 'Desenvolvedora back-end e full stack há 5 anos, em sistemas financeiros, ERP e e-commerce, depois de quase 3 anos como analista de sistemas na implantação do Salesforce. Hoje sustento as integrações entre ERP, Salesforce e uma plataforma nacional de e-commerce e modernizo serviços PHP/Laravel em produção. Uso PHP/Laravel no back-end, Apex, LWC e Flows no Salesforce e React, Vue e TypeScript no front-end.',
+    intro: 'Desenvolvedora back-end e full stack há 5 anos, em sistemas financeiros, ERP e e-commerce, depois de quase 3 anos como analista de sistemas na implantação do Salesforce. Hoje sustento as integrações entre ERP, Salesforce e uma plataforma nacional de e-commerce e modernizo serviços PHP/Laravel em produção. Uso PHP/Laravel no back-end, Apex, LWC e Flows no Salesforce e React, Vue e TypeScript no front-end. No desenvolvimento uso agentes de IA (Claude Code), com testes e revisão de diff validando cada mudança.',
     location: 'Belo Horizonte, Brasil · híbrido ou remoto',
     cv: 'Baixar currículo',
     view: 'Ver projetos',
-    ribbon: ['PHP / LARAVEL', 'SALESFORCE', 'REACT / TYPESCRIPT', 'INTEGRAÇÕES', 'APIs REST', 'AWS / AZURE'],
+    ribbon: ['PHP / LARAVEL', 'SALESFORCE', 'REACT / TYPESCRIPT', 'INTEGRAÇÕES', 'APIs REST', 'IA · CLAUDE CODE', 'AWS / AZURE'],
     aboutTitle: 'Como eu trabalho.',
     principles: [
       { title: 'Consistência antes de velocidade', text: 'Em sistema financeiro e de ERP, um dado errado custa mais que uma entrega atrasada. Transação, idempotência e lock no lugar certo vêm primeiro.' },
@@ -132,11 +139,11 @@ export const copy = {
     eyebrow: 'Camila Teixeira / Software Engineer · Back end & Full Stack',
     titleTop: 'Integrations that work.',
     titleBottom: 'Legacy that evolves.',
-    intro: 'Back-end and full stack developer for 5 years, in financial systems, ERP, and e-commerce, after almost 3 years as a systems analyst rolling out Salesforce. Today I maintain the integrations between an ERP, Salesforce, and a nationwide e-commerce platform and modernize PHP/Laravel services in production. I work with PHP/Laravel on the back end, Apex, LWC, and Flows on Salesforce, and React, Vue, and TypeScript on the front end.',
+    intro: 'Back-end and full stack developer for 5 years, in financial systems, ERP, and e-commerce, after almost 3 years as a systems analyst rolling out Salesforce. Today I maintain the integrations between an ERP, Salesforce, and a nationwide e-commerce platform and modernize PHP/Laravel services in production. I work with PHP/Laravel on the back end, Apex, LWC, and Flows on Salesforce, and React, Vue, and TypeScript on the front end. I build with AI coding agents (Claude Code), with tests and diff review validating every change.',
     location: 'Belo Horizonte, Brazil · hybrid, remote, or open to relocation',
     cv: 'Download résumé',
     view: 'See projects',
-    ribbon: ['PHP / LARAVEL', 'SALESFORCE', 'REACT / TYPESCRIPT', 'INTEGRATIONS', 'REST APIs', 'AWS / AZURE'],
+    ribbon: ['PHP / LARAVEL', 'SALESFORCE', 'REACT / TYPESCRIPT', 'INTEGRATIONS', 'REST APIs', 'AI · CLAUDE CODE', 'AWS / AZURE'],
     aboutTitle: 'How I work.',
     principles: [
       { title: 'Consistency before speed', text: 'In financial and ERP systems, wrong data costs more than a late delivery. Transactions, idempotency, and locks in the right place come first.' },

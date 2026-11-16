@@ -15,7 +15,7 @@
   "education": "Formação",
   "languages": "Idiomas"
  },
- "summary": "Desenvolvedora back-end e full stack há <b>5 anos</b>, em sistemas financeiros (cooperativas de crédito), ERP, e-commerce nacional e aplicações para indústria e mineração. Antes, quase 3 anos como analista de sistemas na implantação do Salesforce. Hoje sustento as <b>integrações entre ERP, Salesforce e uma plataforma nacional de e-commerce</b> e modernizo serviços PHP/Laravel em produção. Junto back-end em <b>PHP/Laravel</b>, desenvolvimento <b>Salesforce (Apex, LWC, Flows)</b> e front-end em <b>React, Vue e TypeScript</b>. Nos projetos públicos aplico controle de concorrência, idempotência, livro-razão imutável e regras de acesso no banco, sempre com testes que reproduzem a falha.",
+ "summary": "Desenvolvedora back-end e full stack há <b>5 anos</b>, em sistemas financeiros (cooperativas de crédito), ERP, e-commerce nacional e aplicações para indústria e mineração. Antes, quase 3 anos como analista de sistemas na implantação do Salesforce. Hoje sustento as <b>integrações entre ERP, Salesforce e uma plataforma nacional de e-commerce</b> e modernizo serviços PHP/Laravel em produção. Junto back-end em <b>PHP/Laravel</b>, desenvolvimento <b>Salesforce (Apex, LWC, Flows)</b> e front-end em <b>React, Vue e TypeScript</b>. Nos projetos públicos aplico controle de concorrência, idempotência, livro-razão imutável e regras de acesso no banco, sempre com testes que reproduzem a falha. No desenvolvimento uso <b>agentes de IA (Claude Code)</b>, com testes e revisão de diff validando cada mudança.",
  "skills": [
   [
    "Back-end",
@@ -35,7 +35,11 @@
   ],
   [
    "Engenharia",
-   "PHPUnit, Pest, Jest, Vitest, Larastan, GitLab CI e GitHub Actions, Docker, Linux, Git, AWS, Azure, Scrum, Figma, desenvolvimento assistido por IA com revisão por testes"
+   "PHPUnit, Pest, Jest, Vitest, Larastan, GitLab CI e GitHub Actions, Docker, Linux, Git, AWS, Azure, Scrum, Figma"
+  ],
+  [
+   "IA no desenvolvimento",
+   "Claude Code e agentes de código, guias para agentes nos repositórios (CLAUDE.md), revisão de PR por IA no CI (API da Anthropic), mudanças validadas por testes, tipos e revisão de diff"
   ],
   [
    "Em projetos pessoais",
